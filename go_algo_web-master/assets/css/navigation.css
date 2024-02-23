@@ -1,0 +1,10 @@
+.router-link-exact-active {
+	transition: .3s;
+	opacity: 1 !important;
+	border-radius: 42px;
+	border: 1px solid #a4a4a4 !important;
+	background: rgba(237, 67, 69, 0.4) !important;
+	padding: 12px;
+}
+
+

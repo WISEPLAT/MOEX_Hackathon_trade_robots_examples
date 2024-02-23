@@ -1,0 +1,58 @@
+<head>
+    <meta charset="utf-8" />
+    <title>DojiChart - Simple Usage</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../candels/dojichart.min.css"/>
+    <script src="http://tom.at.ua/scripts/dojichart/jquery.min.js"></script>
+    <script type="text/javascript" src="../candels/dojichart.min.js"></script>
+    <link rel="stylesheet" href="candels_2.css">
+
+  </head>
+  <body>
+    <H2>Source:My Server | Symbol:XAUUSD</H2>
+
+	<div class="toolset">
+      <select id="symbol">
+        <option value="XAUUSD">XAUUSD</option>
+      </select>
+      <span class="buttonset">
+        <button id="btn-gran-Dz4" class="btn-gran" data-value="Dz4">Dz4</button>
+        <button id="btn-gran-Dz5" class="btn-gran" data-value="Dz5">Dz5</button>
+        <button id="btn-gran-Dz6" class="btn-gran" data-value="Dz6">Dz6</button>
+        <button id="btn-gran-Dz8" class="btn-gran" data-value="Dz8">Dz8</button>
+        <button id="btn-gran-Dz10" class="btn-gran" data-value="Dz10">Dz10</button>
+        <button id="btn-gran-Dz12" class="btn-gran" data-value="Dz12">Dz12</button>
+      </span>
+    </div>
+
+	<div class="box">
+      <div class="dojichart" id="my-dojichart">
+        <div class="region" data-name="timelabels"></div>
+        <div class="region" data-name="price"></div>
+        <div class="region" data-name="volume"></div>
+      </div>
+    </div>
+
+    <div class="toolset">
+      <span class="buttonset">
+        <button id="btn-interval-decr" class="btn-intervaldecr">|||</button>
+        <button id="btn-interval-incr" class="btn-intervalincr">| | |</button>
+        <button id="btn-barwidth-decr" class="btn-barwidthdecr">[]</button>
+        <button id="btn-barwidth-incr" class="btn-barwidthincr">[  ]</button>
+      </span>
+      <span class="buttonset">
+        <button id="btn-scroll-start" class="btn-scrollstart">|&lt;</button>
+        <button id="btn-scroll-end" class="btn-scrollend">&gt;|</button>
+        <button id="btn-scroll-back100" class="btn-scroll" data-value="-100">&laquo;</button>
+        <button id="btn-scroll-forward100" class="btn-scroll" data-value="+100">&raquo;</button>
+        <button id="btn-scroll-back10" class="btn-scroll" data-value="-10">&lt;</button>
+        <button id="btn-scroll-forward10" class="btn-scroll" data-value="+10">&gt;</button>
+        <button id="btn-scroll-back1" class="btn-scroll" data-value="-1">-1</button>
+        <button id="btn-scroll-forward1" class="btn-scroll" data-value="+1">+1</button>
+      </span>
+    </div>
+
+    <p id="api-print"></p>
+</body>
+<script src="candels_2.js"></script>
+</html>

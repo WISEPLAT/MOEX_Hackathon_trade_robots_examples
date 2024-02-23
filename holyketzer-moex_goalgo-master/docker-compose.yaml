@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  postgres:
+    image: timescale/timescaledb:latest-pg14
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "secret"
+    ports:
+      - "127.0.0.1:35432:5432"
+    volumes:
+      - ./db/pg_data:/var/lib/postgresql/data
+    restart: always
+
+  redis:
+    image: redis:latest
+    ports:
+      - "127.0.0.1:36379:6379"
+    volumes:
+      - ./db/redis_data:/data

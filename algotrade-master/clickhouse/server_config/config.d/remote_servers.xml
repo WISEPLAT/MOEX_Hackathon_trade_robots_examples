@@ -1,0 +1,54 @@
+<clickhouse>
+    <remote_servers>
+        <main_cluster>
+            <shard>
+                <replica>
+                    <default_database from_env="CH_DB_NAME" />
+                    <host>clickhouse-node01</host>
+                    <port>9000</port>
+                    <user from_env='CH_USER' />
+                    <password from_env='CH_PASSWORD' />
+                </replica>
+                <replica>
+                    <default_database from_env="CH_REPLICA_DB_NAME" />
+                    <host>clickhouse-node02</host>
+                    <port>9000</port>
+                    <user from_env='CH_USER' />
+                    <password from_env='CH_PASSWORD' />
+                </replica>
+            </shard>
+            <shard>
+                <replica>
+                    <default_database from_env="CH_DB_NAME" />
+                    <host>clickhouse-node03</host>
+                    <port>9000</port>
+                    <user from_env='CH_USER' />
+                    <password from_env='CH_PASSWORD' />
+                </replica>
+                <replica>
+                    <default_database from_env="CH_REPLICA_DB_NAME" />
+                    <host>clickhouse-node04</host>
+                    <port>9000</port>
+                    <user from_env='CH_USER' />
+                    <password from_env='CH_PASSWORD' />
+                </replica>
+            </shard>
+            <shard>
+                <replica>
+                    <default_database from_env="CH_DB_NAME" />
+                    <host>clickhouse-node05</host>
+                    <port>9000</port>
+                    <user from_env='CH_USER' />
+                    <password from_env='CH_PASSWORD' />
+                </replica>
+                <replica>
+                    <default_database from_env="CH_REPLICA_DB_NAME" />
+                    <host>clickhouse-node06</host>
+                    <port>9000</port>
+                    <user from_env='CH_USER' />
+                    <password from_env='CH_PASSWORD' />
+                </replica>
+            </shard>
+        </main_cluster>
+    </remote_servers>
+</clickhouse>

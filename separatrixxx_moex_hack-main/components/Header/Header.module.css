@@ -1,0 +1,12 @@
+.header {
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	height: 50px;
+
+	border-radius: 0 0 10px 10px;
+	background: var(--white);
+	grid-template-columns: auto 1fr;
+	justify-items: end;
+}

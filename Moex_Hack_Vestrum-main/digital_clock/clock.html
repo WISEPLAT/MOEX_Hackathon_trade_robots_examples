@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <script>
+                alert(new Date());
+            </script>
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div>
+    </div>
+
+</body>
+<script src=""></script>
+</html>
+
+a.navlink {
+  color: black; /* задаем цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+
+}

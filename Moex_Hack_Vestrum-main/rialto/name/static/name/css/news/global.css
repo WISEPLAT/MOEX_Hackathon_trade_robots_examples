@@ -1,0 +1,46 @@
+:root {
+  /* fonts */
+  --font: Montserrat;
+  --font-libre-barcode-128-text: "Libre Barcode 128 Text";
+
+  /* font sizes */
+  --font-size: 1.25rem;
+  --font-size-21xl: 2.5rem;
+  --font1-size: 1.88rem;
+  --font-size-base: 1rem;
+  --font-size-xs: 0.75rem;
+  --font-size-6xl: 1.56rem;
+
+  /* Colors */
+  --color2: #fff;
+  --color-black: #000;
+  --color1: #5a5a5a;
+  --color4: #212325;
+  --color: #f3f4f6;
+  --color-silver: #b9b9b9;
+  --color3: #eb3426;
+
+  /* Gaps */
+  --gap-44xl: 3.94rem;
+  --gap-xs: 0.75rem;
+  --gap-5xs: 0.5rem;
+  --gap-19xl: 2.38rem;
+  --gap-base: 1rem;
+  --gap-3xs: 0.63rem;
+
+  /* Paddings */
+  --padding-3xs: 0.63rem;
+  --padding-mini: 0.94rem;
+  --padding-9xs: 0.25rem;
+  --padding-xs: 0.75rem;
+  --padding-8xs: 0.31rem;
+  --padding-base: 1rem;
+  --padding-7xs: 0.38rem;
+  --padding-5xs: 0.5rem;
+
+  /* Border radiuses */
+  --br-xl: 20px;
+  --br-15xl: 34px;
+  --br-3xl: 22px;
+  --br-6xl: 25px;
+}

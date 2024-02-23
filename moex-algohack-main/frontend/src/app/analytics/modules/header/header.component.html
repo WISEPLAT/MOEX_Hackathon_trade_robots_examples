@@ -1,0 +1,10 @@
+<div class="header">
+  <app-logo></app-logo>
+
+  <div class="header__right">
+    <app-balance
+      [balance]="(balacneSerivce.balance$ | async) ?? null"
+    ></app-balance>
+    <app-user></app-user>
+  </div>
+</div>

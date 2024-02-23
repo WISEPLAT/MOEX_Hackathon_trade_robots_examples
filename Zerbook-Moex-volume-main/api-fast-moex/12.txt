@@ -1,0 +1,8 @@
+pandas==2.1.1
+fastapi==0.103.1
+gunicorn
+uvicorn==0.23.2
+uvloop
+httptools==0.6.0
+datetime
+psycopg2==2.9.8

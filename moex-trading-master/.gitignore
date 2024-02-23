@@ -1,0 +1,6 @@
+/target
+/.idea/.gitignore
+/Cargo.lock
+/.idea/modules.xml
+/.idea/moex-trading.iml
+/.idea/vcs.xml

@@ -1,0 +1,58 @@
+<!-- FILEPATH: /Users/alex/my/moex_goalgo/web_app/app/views/custom_indicies/index.html.erb -->
+
+<h1>Мои индексы</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Название
+      </th>
+      <th>
+        Доходность
+        <i class="bi bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="В год"></i>
+      </th>
+      <th>
+        Риск
+        <i class="bi bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Стандартное отклонение"></i>
+      </th>
+      <th>
+        Просадка
+        <i class="bi bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Максимальная просадка за год"></i>
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @bm_stat %>
+      <tr>
+        <td class="text-secondary">
+          IMOEX
+          <i class="bi bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Бенчмарк"></i>
+        </td>
+        <td class="text-secondary"><%= @bm_stat.avg_yr&.round(2) %>%</td>
+        <td class="text-secondary"><%= @bm_stat.rsd&.round(2) %>%</td>
+        <td class="text-secondary"><%= @bm_stat.max_yd&.round(2) %>%</td>
+        <td></td>
+      </tr>
+    <% end %>
+    <% @custom_indexes.each do |custom_index| %>
+      <tr>
+        <td><%= custom_index.name %></td>
+        <td><%= custom_index.avg_yr&.round(2) %>%</td>
+        <td><%= custom_index.rsd&.round(2) %>%</td>
+        <td><%= custom_index.max_yd&.round(2) %>%</td>
+        <td>
+          <%= link_to custom_index, class: "btn btn-primary" do %>
+            <i class="bi bi-eye-fill"></i>
+          <% end %>
+          <%= link_to custom_index, data: { "turbo-method": :delete , "turbo-confirm": "Вы уверены?" }, class: "btn btn-danger" do %>
+            <i class="bi bi-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= render partial: "chart", locals: { price_lines: @price_lines, benchmark: @benchmark } %>

@@ -1,0 +1,70 @@
+version: '3.7'
+
+services:
+    apifastmoex:
+        build:
+            context: ./api-fast-moex
+        image: apifastmoex_img
+        container_name: apifastmoex_cont
+        restart: unless-stopped
+        ports:
+            - "8000:8000"
+        # extra_hosts:
+        #     - "host.docker.internal:host-gateway"
+        command: gunicorn -b 0.0.0.0:8000 -k uvicorn.workers.UvicornWorker main:api
+        depends_on:
+            - db_moex
+        networks:
+            - appnet
+    db_moex:
+        container_name: db_cont_moex
+        restart: unless-stopped
+        ports:
+        - "5432:5432"
+        environment:
+        - POSTGRES_PASSWORD=root
+        - POSTGRES_USER=admin
+        image: postgres:14.3-alpine
+        networks:
+            - appnet
+    nginx-moex:
+        image: nginx
+        container_name: nginx-cont-moex
+        restart: unless-stopped
+        depends_on:
+            - apifastmoex
+        volumes:
+            - ./html:/usr/share/nginx/html:ro
+        ports:
+            - "8090:80"
+        networks:
+            - internet
+            - appnet
+    download-moex:
+        build:
+            context: ./moex-download
+        image: download-img-moex
+        container_name: download-cont-moex
+        restart: unless-stopped
+        depends_on:
+            - db_moex
+        networks:
+            - appnet
+
+networks:
+    internet:
+        name: internet
+        driver: bridge
+    appnet:
+        name: appnet
+        driver: bridge
+    # nginx:
+    #     image: nginx
+    #     container_name: nginx-html
+    #     restart: unless-stopped
+    #     volumes:
+    #         - ./html:/usr/share/nginx/html:ro
+    #     depends_on:
+    #         - microservice
+    #     ports:
+    #         - "9090:80"

@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    width: 80%;
+    margin: 0 auto;
+	padding-top: 40px;
+	user-select: none;
+	overflow-x: hidden;
+}
+
+/*
+ * Static bottom footer
+ */
+footer {
+	padding: 40px 10vw 40px 10vw;
+	margin: 30% -10vw -10vh;
+	position: static;
+}
+
+#__nuxt {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}

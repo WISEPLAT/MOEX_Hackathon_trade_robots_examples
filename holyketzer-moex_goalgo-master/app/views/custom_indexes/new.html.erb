@@ -1,0 +1,99 @@
+<h1>Собрать свой индекс</h1>
+
+<div class="row filter-spoiler">
+  <div class="col col-md-9 text-muted align-middle">
+    Акций не должно быть слишком мало для лучшей диверсификации
+  </div>
+  <div class="col col-md-3 text-end">
+    <span class="align-middle">
+      отфильтровано ≈
+      <span class="fs-2">
+        <span id="filtered-count"><%= @shares_count %></span>
+      </span>
+      акций
+    </span>
+  </div>
+</div>
+
+<%= form_with(model: @custom_index, url: custom_indexes_path, method: :post) do |form| %>
+  <!-- Период базы -->
+  <div class="input-group mb-3">
+    <span class="input-group-text">Формирование базы расчёта</span>
+    <select class="form-select" id="review_period" name="review_period">
+      <option selected value="quarterly">Раз в квартал</option>
+      <option value="yearly">Раз в год</option>
+    </select>
+  </div>
+
+  <!-- Фильтры -->
+  <div class="input-group mb-3">
+    <span class="input-group-text">Фильтр по уровню листинга</span>
+    <select class="form-select filter-levels multiple-select-field" id="filter_listing" name="filter_listing[]" data-placeholder="Выбери один или несколько уровней (опционально)" multiple>
+      <option value="1">Уровень 1</option>
+      <option value="2">Уровень 2</option>
+      <option value="3">Уровень 3</option>
+    </select>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Фильтр по сектору</span>
+    <select class="form-select filter-tickers multiple-select-field" id="filter_sector" name="filter_sector[]" data-placeholder="Выбери сектора экономики (опционально)" multiple>
+      <% @sectors.each do |id, name| %>
+        <option value="<%= id %>"><%= name %></option>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Фильтр по акциям</span>
+    <select class="form-select filter-sectors multiple-select-field" id="filter_tickers" name="filter_tickers[]" data-placeholder="Выбери акции (опционально)" multiple>
+      <% @shares.each do |secid, name| %>
+        <option value="<%= secid %>"><%= name %>&nbsp;[<b><%= secid %></b>]</option>
+      <% end %>
+    </select>
+  </div>
+
+  <!-- Отбор в индекс -->
+  <div class="input-group mb-3">
+    <span class="input-group-text">Принцип отбора</span>
+    <span>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="selection" id="selection_topcap" value="selection_topcap" checked>
+
+        <label class="form-check-label" for="selection_topcap">Топ рыночной капитализации</label>
+        <div class="form-floating mb-3">
+          <input type="number" min="5" max="500" step="1" id="topcap_count" name="topcap_count" class="form-control" value="50" />
+          <label class="form-label" for="topcap_count">Количество акций</label>
+        </div>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="selection" id="selection_momentum" value="selection_momentum">
+
+        <label class="form-check-label" for="selection_momentum">Моментум за последние</label>
+        <div class="form-floating mb-3">
+          <input type="number" min="30" max="730" step="1" id="momentum_days" name="momentum_days" class="form-control" value="365" />
+          <label for="momentum_days">Количество дней</label>
+        </div>
+      </div>
+    </span>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Взвешивание акций</span>
+    <select class="form-select" id="weighing" name="weighing">
+      <option selected value="market_cap">По рыночной капитализации</option>
+      <option value="equal">Равное</option>
+    </select>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="index_name" name="index_name" placeholder="">
+    <label for="index_name">Название</label>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit "Произвести расчёт", id: "create-index", class: "btn btn-success" %>
+  </div>
+<% end %>
+

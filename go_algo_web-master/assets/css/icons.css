@@ -1,0 +1,9 @@
+.nuxt-icon svg {
+	width: 2em !important;
+	height: 2em !important;
+}
+
+.nuxt-icon-small svg {
+	width: 1.5em !important;
+	height: 1.5em !important;
+}

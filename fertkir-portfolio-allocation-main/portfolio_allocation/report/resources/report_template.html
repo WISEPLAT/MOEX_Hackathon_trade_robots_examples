@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>%TITLE%</title>
+    <link rel="stylesheet" href="%MAIN_CSS%">
+</head>
+<body>
+<div id="container">
+    <div id="settings">
+        <label for="allocationBy">Allocate by</label> <select id="allocationBy"></select>
+    </div>
+    <div id="chartContainer">
+        <canvas id="chart" class="chart"></canvas>
+    </div>
+</div>
+<script src="%CHART_JS%"></script>
+<script src="%MAIN_JS%"></script>
+<script>
+    init('%LOCALE%', '%CURRENCY%', %DATA%)
+</script>
+</body>
+</html>

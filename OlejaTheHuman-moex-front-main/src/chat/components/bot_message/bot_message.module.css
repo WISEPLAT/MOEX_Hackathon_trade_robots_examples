@@ -1,0 +1,51 @@
+.bot_message {
+    font-size: var(--middle-size);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 550px;
+    width: fit-content;
+    padding: 8px 12px 10px 12px;
+    gap: 10px;
+    background-color: #eeeeee;
+    border-radius: 4px 20px 20px 20px;
+    height: fit-content;
+    white-space: pre-line;
+    word-wrap: anywhere;
+}
+
+.bot_message span {
+    white-space: nowrap;
+}
+
+
+.time {
+    position: absolute;
+    left: 12px;
+    bottom: -16px;
+    font-size: var(--small-size);
+    color: rgba(34, 34, 34, 0.50)
+}
+
+.markdown {
+    width: 100%;
+    white-space: break-spaces;
+}
+
+.markdown pre {
+    width: 100%;
+    white-space: break-spaces;
+}
+
+.markdown code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.markdown p {
+    margin: 0;
+    padding: 0;
+}

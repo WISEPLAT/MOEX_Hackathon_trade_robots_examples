@@ -1,0 +1,12 @@
+.wrapper{
+    flex: 1 1 auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+}

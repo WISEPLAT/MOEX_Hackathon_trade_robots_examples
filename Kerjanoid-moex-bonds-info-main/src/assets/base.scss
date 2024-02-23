@@ -1,0 +1,69 @@
+:root {
+  // base colors
+  --bi-white: #ffffff;
+  --bi-black: #000000;
+
+  // project colors
+  --bi-coral-pink: #F78079;
+  --bi-mint-cream: #F6FFF6;
+  --bi-tea-green: #C7F9CC;
+  --bi-light-green: #80ED99;
+  --bi-verdigris: #38A3A5;
+  --bi-lapis-lazuli: #22577A;
+  --bi-mint-cream: #112C3D;
+  --bi-prussian-blue: #112C3D;
+  --bi-rich-black: #09161F;
+
+  // opacity
+  --bi-l-opacity: 0.8;
+}
+
+/* semantic color variables for this project */
+:root {
+  --bi-bg: var(--bi-verdigris);
+  --bi-text: var(--bi-prussian-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bi-bg: var(--bi-prussian-blue);
+    --bi-text: var(--bi-verdigris);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--bi-text);
+  background: var(--bi-bg);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.2;
+  font-family:
+    Roboto,
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

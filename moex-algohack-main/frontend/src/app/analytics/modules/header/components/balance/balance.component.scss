@@ -1,0 +1,19 @@
+.balance {
+  display: flex;
+  gap: 29px;
+}
+
+.balance-item {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  &__label {
+    font-family: "Roboto", sans-serif;
+    color: #5d5d5d;
+  }
+  &__value {
+    color: #2c2929;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

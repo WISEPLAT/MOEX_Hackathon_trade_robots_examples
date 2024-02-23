@@ -1,0 +1,205 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'name/css/review/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/review/index.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Barcode 128 Text:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="div">
+      <div class="div1">
+        <div class="component-6">
+          <div class="group-parent">
+            <img
+              class="vuesaxlinearmenu-icon"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearmenu.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'dashboard' %}">Инструменты</a>
+          </div>
+          <div class="frame-parent">
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlineartrade.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'newsline' %}">Лента</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
+            </div>
+            <div class="component-4">
+              <div class="vuesaxlinearmenu">
+                <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/wallet/vuesaxlinearwallet2.svg' %}"
+                />
+
+                <img
+                  class="vuesaxlinearmenu-icon1"
+                  alt=""
+                  src="{% static 'name/img/wallet/vuesaxlinearwallet2.svg' %}"
+                />
+              </div>
+              <div class="div6">Кошелек</div>
+            </div>
+          </div>
+          <div class="group-parent">
+            <img
+              class="frame-child"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'catalogue' %}">Каталог</a>
+          </div>
+        </div>
+        <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}" />
+      </div>
+      <header class="header">
+        <div class="vector-parent">
+          <img class="vector-icon" alt="" src="{% static 'name/img/global/vector.svg' %}" />
+
+          <div class="vestrum-wrapper">
+            <div class="vestrum">vestrum</div>
+          </div>
+        </div>
+        <div class="div8">31 декабря 2023 г. 23:59:59</div>
+        <div class="parent">
+          <div class="div9">
+            <div class="vuesaxlinearsearch-normal">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearsearchnormal.svg' %}"
+              />
+            </div>
+            <i class="i">Введите поисковый запрос</i>
+          </div>
+          <div class="frame-wrapper">
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="ellipse-parent">
+                  <img
+                    class="frame-item"
+                    alt=""
+                    src="{% static 'name/img/global/ellipse-3212@2x.png' %}"
+                  />
+
+                  <div class="group">
+                    <div class="vestrum">Кураж</div>
+                    <img class="icons" alt="" src="{% static 'name/img/global/icons.svg' %}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <h1 class="h1">Обзор</h1>
+        <div class="parent1">
+          <div class="div11">Цена акции</div>
+          <div class="div12">В вашем портфеле:</div>
+          <div class="div13">100 000₽</div>
+          <div class="div14">0 акций</div>
+        </div>
+        <button class="button">
+          <div class="div15">Купить акции</div>
+        </button>
+        <button class="button1">
+          <div class="div15">Продать акции</div>
+        </button>
+        <div class="group-wrapper">
+          <div class="group-container">
+            <div class="group-div">
+              <h3 class="h3">Сбер</h3>
+              <div class="sber">SBER</div>
+              <div class="div17">Доходность за полгода</div>
+              <div class="div18">Сектор</div>
+              <div class="div19">111,11%</div>
+              <div class="div20">Банк</div>
+              <img
+                class="group-child"
+                alt=""
+                src="{% static 'name/img/review/ellipse-3224@2x.png' %}"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="parent2">
+          <div class="div21">Прогнозная цена</div>
+          <div class="div22">Диапазон</div>
+          <div class="div23">Рекомендация</div>
+          <h3 class="h31">Сводный прогноз</h3>
+          <div class="div24">111 111₽</div>
+          <div class="div25">111₽ – 999₽ </div>
+          <div class="div26">Покупать</div>
+          <div class="div27">+11 111₽ (25,5%)</div>
+        </div>
+        <h3 class="h32">Похожие акции</h3>
+        <div class="ozon-parent">
+          <div class="ozon">Ozon</div>
+          <div class="div28">11 000₽</div>
+          <div class="div29">+1 000₽ (11,11%)</div>
+          <img
+            class="instance-child"
+            alt=""
+            src="{% static 'name/img/review/ellipse-32241@2x.png' %}"
+          />
+        </div>
+        <div class="ozon-group">
+          <div class="ozon">Роснефть</div>
+          <div class="div28">11 000₽</div>
+          <div class="div29">+1 000₽ (11,11%)</div>
+          <img
+            class="instance-child"
+            alt=""
+            src="{% static 'name/img/review/ellipse-32242@2x.png' %}"
+          />
+        </div>
+        <div class="ozon-container">
+          <div class="ozon">Яндекс</div>
+          <div class="div28">11 000₽</div>
+          <div class="div29">+1 000₽ (11,11%)</div>
+          <img
+            class="instance-child"
+            alt=""
+            src="{% static 'name/img/review/ellipse-32243@2x.png' %}"
+          />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

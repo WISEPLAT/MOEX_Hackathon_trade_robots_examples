@@ -1,0 +1,179 @@
+
+ТАБЛИЦЫ ЗАДАЧ ДЛЯ СЕРВИСОВ
+
+CREATE TABLE public.data_gen_tasks
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	path_to_config varchar(250),
+	timeframe varchar(50) NOT NULL,
+	start_date date NOT NULL,
+	end_date date NOT NULL,
+	count_points integer NOT NULL,
+	extr_bar_count integer NOT NULL,
+	size_df integer NOT NULL,
+	max_unmark float NOT NULL,
+	data_path varchar(50) NOT NULL,
+	task_status varchar(50) DEFAULT 'created',
+	created_at timestamp DEFAULT now()
+);
+
+CREATE TABLE public.edu_neurals_tasks
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	path_to_config varchar(250),
+	data_path varchar(50) NOT NULL,
+	scaler_path varchar(50) NOT NULL,
+	neural_path varchar(50) NOT NULL,
+	learning_rate float NOT NULL,
+	epochs integer NOT NULL,
+	steps_per_epoch integer NOT NULL,
+	validation_steps integer NOT NULL,
+	new_model_flag boolean NOT NULL,
+	task_status varchar(50) DEFAULT 'created',
+	created_at timestamp DEFAULT now()
+);
+
+CREATE TABLE public.data_markup_tasks
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	path_to_config varchar(250),
+	ticker varchar(50) NOT NULL,
+	timeframe varchar(50) NOT NULL,
+	start_date date NOT NULL,
+	end_date date NOT NULL,
+	count_points integer NOT NULL,
+	extr_bar_count integer NOT NULL,
+	task_status varchar(50) DEFAULT 'created',
+	created_at timestamp DEFAULT now()
+);
+
+CREATE TABLE public.calc_signals_tasks
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	path_to_config varchar(250),
+	tickers varchar(50) NOT NULL,
+	scaler_path varchar(50) NOT NULL,
+	neural_path varchar(50) NOT NULL,
+	timeframe varchar(50) NOT NULL,
+	count_points integer NOT NULL,
+	extr_bar_count integer NOT NULL,
+	max_unmark float NOT NULL,
+	count_datys integer NOT NULL,
+	task_status varchar(50) DEFAULT 'created',
+	created_at timestamp DEFAULT now()
+);
+
+
+CREATE TABLE public.calc_profit_tasks
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	path_to_config varchar(250),
+	scaler_path varchar(50) NOT NULL,
+	neural_path varchar(50) NOT NULL,
+	ticker varchar(50) NOT NULL,
+	timeframe varchar(50) NOT NULL,
+	start_date date NOT NULL,
+	end_date date NOT NULL,
+	count_points integer NOT NULL,
+	extr_bar_count integer NOT NULL,
+	max_unmark float NOT NULL,
+	task_status varchar(50) DEFAULT 'created',
+	created_at timestamp DEFAULT now()
+);
+
+
+ТАБЛИЦЫ РЕЗУЛЬТАТОВ
+
+CREATE TABLE public.data_markup_results
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	task_id integer NOT NULL,
+	markup_example text,
+	singals_example bytea,
+	profit_without_shift float,
+	profit_with_shift float,
+	created_at timestamp DEFAULT now()
+);
+
+CREATE TABLE public.edu_neural_results
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	task_id integer NOT NULL,
+	losses_results bytea,
+	train_accuracy_score float,
+	train_roc_auc_score float,
+	train_precision_score float,
+	train_recall_score float,
+	train_f1_score float,
+	train_log_loss float,
+	test_accuracy_score float,
+	test_roc_auc_score float,
+	test_precision_score float,
+	test_recall_score float,
+	test_f1_score float,
+	test_log_loss float,
+	created_at timestamp DEFAULT now()
+);
+
+
+CREATE TABLE public.cals_signals_results
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	task_id integer NOT NULL,
+	ticker varchar(50) NOT NULL,
+	signal integer NOT NULL,
+	signal_position integer NOT NULL,
+	created_at timestamp DEFAULT now()
+);
+
+
+CREATE TABLE public.cals_profit_results
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	task_id integer NOT NULL,
+	singals_example bytea,
+	test_accuracy_score float,
+	test_roc_auc_score float,
+	test_precision_score float,
+	test_recall_score float,
+	test_f1_score float,
+	test_log_loss float,
+	
+	data_std float,
+	max_risk float,
+	buy_hold_std float,
+	buy_hold_sharp float,
+	ideal_strategy_profit_without_shift float,
+	ideal_strategy_profit_with_shift float,
+	ideal_strategy_std_without_shift float,
+	ideal_strategy_std_with_shift float,
+	ideal_strategy_sharp_without_shift float,
+	ideal_strategy_sharp_with_shift float,
+	ideal_strategy_trade_count_without_shift integer,
+	ideal_strategy_trade_count_with_shift integer,
+	
+	neural_strategy_profit_without_shift float,
+	neural_strategy_profit_with_shift float,
+	neural_strategy_std_without_shift float,
+	neural_strategy_std_with_shift float,
+	neural_strategy_sharp_without_shift float,
+	neural_strategy_sharp_with_shift float,
+	neural_strategy_trade_count_without_shift integer,
+	neural_strategy_trade_count_with_shift integer,
+	
+	dyn_ideal_trading bytea,
+	dyn_ideal_portfel bytea,
+	dyn_neural_trading bytea,
+	dyn_neural_portfel bytea,
+	
+	created_at timestamp DEFAULT now()
+);

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<yandex>
+    <base_config>
+        <logger>
+            <level from_env="CH_LOG_LEVEL"/>
+            <console>true</console>
+            <size>1000M</size>
+            <count>10</count>
+            <log remove="remove"/>
+            <errorlog remove="remove"/>
+        </logger>
+
+        <query_log>
+            <database>system</database>
+            <table>query_log</table>
+            <partition_by>toYYYYMM(event_date)</partition_by>
+            <ttl>event_date + INTERVAL 30 DAY DELETE</ttl>
+            <flush_interval_milliseconds>7500</flush_interval_milliseconds>
+        </query_log>
+
+        <listen_host>0.0.0.0</listen_host>
+        <http_port>8123</http_port>
+        <tcp_port>9000</tcp_port>
+        <interserver_http_port>9009</interserver_http_port>
+
+        <max_connections>4096</max_connections>
+        <keep_alive_timeout>3</keep_alive_timeout>
+        <max_concurrent_queries>100</max_concurrent_queries>
+        <uncompressed_cache_size>8589934592</uncompressed_cache_size>
+        <mark_cache_size>5368709120</mark_cache_size>
+
+        <path>/var/lib/clickhouse/</path>
+        <tmp_path>/var/lib/clickhouse/tmp/</tmp_path>
+        <user_files_path>/var/lib/clickhouse/user_files/</user_files_path>
+
+        <users_config>users.xml</users_config>
+        <default_profile>default</default_profile>
+        <default_database>default</default_database>
+        <timezone>Europe/Moscow</timezone>
+        <mlock_executable>false</mlock_executable>
+
+        <distributed_ddl>
+            <path>/clickhouse/task_queue/ddl</path>
+        </distributed_ddl>
+
+        <macros>
+            <cluster>main_cluster</cluster>
+        </macros>
+
+<!--        <default_replica_path>/clickhouse/tables/{shard}/{uuid}</default_replica_path>-->
+<!--        <default_replica_name>{replica}</default_replica_name>-->
+
+        <format_schema_path>/var/lib/clickhouse/format_schemas/</format_schema_path>
+
+        <builtin_dictionaries_reload_interval>3600</builtin_dictionaries_reload_interval>
+        <max_session_timeout>3600</max_session_timeout>
+        <default_session_timeout>60</default_session_timeout>
+
+        <!-- <dictionaries_config>/etc/clickhouse-server/dictionary.xml</dictionaries_config> -->
+    </base_config>
+
+    <base_users_config>
+        <profiles>
+            <default>
+                <max_memory_usage>4000000000</max_memory_usage>
+                <use_uncompressed_cache>0</use_uncompressed_cache>
+                <load_balancing>in_order</load_balancing>
+                <log_queries>1</log_queries>
+            </default>
+        </profiles>
+
+        <users>
+            <default remove="remove">
+            </default>
+        </users>
+
+        <quotas>
+            <default>
+                <interval>
+                    <duration>3600</duration>
+                    <queries>0</queries>
+                    <errors>0</errors>
+                    <result_rows>0</result_rows>
+                    <read_rows>0</read_rows>
+                    <execution_time>0</execution_time>
+                </interval>
+            </default>
+        </quotas>
+    </base_users_config>
+
+</yandex>

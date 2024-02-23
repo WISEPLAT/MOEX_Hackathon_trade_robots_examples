@@ -1,0 +1,60 @@
+.graphicBlock {
+	width: 100%;
+	height: fit-content;
+
+	border-radius: 10px;
+	background: var(--white);
+}
+
+.optionsDiv {
+	display: grid;
+	align-items: center;
+
+	width: fit-content;
+	height: fit-content;
+	margin: 20px 0 0 20px;
+	grid-template-columns: auto auto 1fr;
+	gap: 12px;
+}
+
+.title {
+	font-weight: 600;
+}
+
+.circle {
+	width: 5px;
+	height: 5px;
+
+	border-radius: 9999px;
+	background: var(--dark);
+}
+
+.time {
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	font-weight: 600;
+}
+
+.times {
+	margin: 20px 30px !important;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.time:active,
+.times:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--primary);
+}
+
+@media (min-width: 1024px) {
+	.time:hover,
+	.times:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--primary);
+	}
+}

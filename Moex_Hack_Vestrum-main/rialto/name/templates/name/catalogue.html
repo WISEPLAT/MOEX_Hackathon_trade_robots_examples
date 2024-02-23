@@ -1,0 +1,426 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'name/css/catalogue/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/catalogue/index.css' %}" />
+<!--    <link rel="stylesheet" href="{% static 'name/css/super_global.css' %}" />-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Barcode 128 Text:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="div">
+      <div class="div1">
+        <div class="component-6">
+          <div class="component-3">
+            <img
+              class="vuesaxlinearmenu-icon"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearmenu.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'dashboard' %}">Инструменты</a>
+          </div>
+          <div class="frame-parent">
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlineartrade.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'newsline' %}">Лента</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearwallet2.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'wallet' %}">Кошелек</a>
+            </div>
+          </div>
+          <div class="component-2">
+            <div class="vuesaxlinearmenu">
+              <img
+                class="vuesaxlinearmenu-child"
+                alt=""
+                src="{% static 'name/img/catalogue/group-1171275857.svg' %}"
+              />
+            </div>
+            <div class="div7">Каталог</div>
+          </div>
+        </div>
+        <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}" />
+      </div>
+      <header class="header">
+        <div class="vector-parent">
+          <img class="vector-icon" alt="" src="{% static 'name/img/global/vector.svg' %}" />
+
+          <div class="vestrum-wrapper">
+            <div class="vestrum">vestrum</div>
+          </div>
+        </div>
+        <div class="div8"><div>
+
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
+        <div class="parent">
+          <div class="div9">
+            <div class="vuesaxlinearsearch-normal">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearsearchnormal.svg' %}"
+              />
+            </div>
+            <i class="i">Введите поисковый запрос</i>
+          </div>
+          <div class="frame-wrapper">
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="ellipse-parent">
+                  <img
+                    class="frame-child"
+                    alt=""
+                    src="{% static 'name/img/global/ellipse-3212@2x.png' %}"
+                  />
+
+                  <div class="group">
+                    <div class="vestrum">Кураж</div>
+                    <img class="icons" alt="" src="{% static 'name/img/global/icons.svg' %}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <h1 class="h1">Каталог</h1>
+        <div class="group-div">
+          <button class="button">
+            <div class="div11">Валюта</div>
+          </button>
+          <button class="button1">
+            <a class="div11" id="navlink" href="{% url 'catalogue2' %}">Акции</a>
+          </button>
+        </div>
+        <h3 class="h3">Акции</h3>
+        <div class="parent1">
+          <div class="div13">Название</div>
+          <img class="group-child" alt="" src="{% static 'name/img/catalogue/group-1171275859.svg' %}" />
+        </div>
+        <div class="parent2">
+          <div class="div13">Цена</div>
+          <img class="group-item" alt="" src="{% static 'name/img/catalogue/group-1171275859.svg' %}" />
+        </div>
+        <div class="parent3">
+          <div class="div13">За день</div>
+          <img class="group-inner" alt="" src="{% static 'name/img/catalogue/group-1171275859.svg' %}" />
+        </div>
+        <div class="parent4">
+          <div class="div13">За год</div>
+          <img class="group-icon" alt="" src="{% static 'name/img/catalogue/group-1171275859.svg' %}" />
+        </div>
+        <div class="parent5">
+          <div class="div13">Динамика</div>
+          <img
+            class="group-child1"
+            alt=""
+            src="./public/group-1171275859.svg"
+          />
+        </div>
+        <div class="component-29">
+          <div class="i">Отрасль</div>
+          <img class="vector-icon1" alt="" src="{% static 'name/img/catalogue/vector1.svg' %}" />
+        </div>
+        <div class="component-30">
+          <div class="i">Валюта</div>
+          <img class="vector-icon1" alt="" src="{% static 'name/img/catalogue/vector1.svg' %}" />
+        </div>
+        <div class="div20">
+          <div class="group-parent">
+            <div class="ellipse-group">
+              <img
+                class="ellipse-icon"
+                alt=""
+                src="{% static 'name/img/catalogue/ellipse-3224@2x.png' %}"
+              />
+
+              <div class="usdrub">
+                <p class="p">Доллар США</p>
+                <p class="usdrub1">USDRUB</p>
+              </div>
+            </div>
+            <div class="div21">{{ DOLLAR_RUB }} ₽ </div>
+            <div class="div22">
+              <p class="p">+14,34%</p>
+              <p class="p">0,56%</p>
+            </div>
+            <div class="div23">
+              <p class="p">+3,22%</p>
+              <p class="p">0,42%</p>
+            </div>
+            <button class="rectangle-parent">
+              <div class="rectangle-div"></div>
+              <div class="div24">график</div>
+            </button>
+          </div>
+          <div class="child"></div>
+        </div>
+        <div class="div25">
+          <div class="group-parent">
+            <div class="ellipse-group">
+              <img
+                class="ellipse-icon"
+                alt=""
+                src="{% static 'name/img/flags/pngwing.com.png' %}"
+              />
+
+              <div class="usdrub">
+                <p class="p" style="width: 150px">Фунт стерлингов</p>
+                <p class="usdrub1">PNDRUB</p>
+              </div>
+            </div>
+            <div class="div21">{{ POUND_RUB }} ₽ </div>
+            <div class="div22">
+              <p class="p">+15,32%</p>
+              <p class="p">0,34%</p>
+            </div>
+            <div class="div23">
+              <p class="p">+3,45%</p>
+              <p class="p">0,54%</p>
+            </div>
+            <button class="rectangle-parent">
+              <div class="rectangle-div"></div>
+              <div class="div24">график</div>
+            </button>
+          </div>
+          <div class="child"></div>
+        </div>
+        <div class="div30">
+          <button class="inner">
+            <div class="rectangle-container">
+              <div class="rectangle-div"></div>
+              <div class="div24">график</div>
+            </div>
+          </button>
+          <div class="child"></div>
+          <div class="ellipse-parent1">
+            <img
+              class="ellipse-icon"
+              alt=""
+              src="{% static 'name/img/flags/icons8-швейцария-48.png' %}"
+            />
+
+            <div class="usdrub">
+              <p class="p" style="width: 200px">Швейцарский франк</p>
+              <p class="usdrub1">FRRUB</p>
+            </div>
+          </div>
+          <div class="div32">{{ SWISSFRANK_RUB }} ₽ </div>
+          <div class="div33">
+            <p class="p">-4,20%</p>
+            <p class="p">0,49%</p>
+          </div>
+          <div class="div34">
+            <p class="p">-15,32%</p>
+            <p class="p">0,32%</p>
+          </div>
+        </div>
+        <div class="div35">
+          <button class="inner">
+            <div class="rectangle-container">
+              <div class="rectangle-div"></div>
+              <div class="div24">график</div>
+            </div>
+          </button>
+          <div class="child"></div>
+          <div class="ellipse-parent1">
+            <img
+              class="ellipse-icon"
+              alt=""
+              src="{% static 'name/img/flags/kaz.png' %}"
+            />
+
+            <div class="usdrub">
+              <p class="p" style="width: 200px">Тенге</p>
+              <p class="usdrub1">TNGRUB</p>
+            </div>
+          </div>
+          <div class="div32">{{ TENGE_RUN }} ₽ </div>
+          <div class="div33">
+            <p class="p">-6,87%</p>
+            <p class="p">0,34%</p>
+          </div>
+          <div class="div34">
+            <p class="p">-2,24%</p>
+            <p class="p">0,32%</p>
+          </div>
+        </div>
+        <div class="div40">
+          <div class="group-parent">
+            <div class="ellipse-group">
+              <img
+                class="ellipse-icon"
+                alt=""
+                src="{% static 'name/img/flags/tur.png' %}"
+              />
+
+              <div class="usdrub">
+                <p class="p" style="width: 200px">Турецкая лира</p>
+                <p class="usdrub1">LIRARUB</p>
+              </div>
+            </div>
+            <div class="div21">{{ LIRA_RUN }} ₽ </div>
+            <div class="div22">
+              <p class="p">+4,23%</p>
+              <p class="p">0,23%</p>
+            </div>
+            <div class="div23">
+              <p class="p">+6,34%</p>
+              <p class="p">0,54%</p>
+            </div>
+            <button class="rectangle-parent">
+              <div class="rectangle-div"></div>
+              <div class="div24">график</div>
+            </button>
+          </div>
+          <div class="child"></div>
+        </div>
+        <div class="div45">
+          <div class="group-parent">
+            <div class="ellipse-group">
+              <img
+                class="ellipse-icon"
+                alt=""
+                src="{% static 'name/img/flags/icons8-япония-48.png' %}"
+              />
+
+              <div class="usdrub">
+                <p class="p" style="width: 200px">Японская иена</p>
+                <p class="usdrub1">USDRUB</p>
+              </div>
+            </div>
+            <div class="div21">{{ JAPANIENA_RUB }} ₽ </div>
+            <div class="div22">
+              <p class="p">+12,10%</p>
+              <p class="p">0,45%</p>
+            </div>
+            <div class="div23">
+              <p class="p">+8,10%</p>
+              <p class="p">0,97%</p>
+            </div>
+            <button class="rectangle-parent">
+              <div class="rectangle-div"></div>
+              <div class="div24">график</div>
+            </button>
+          </div>
+          <div class="child"></div>
+        </div>
+        <div class="div50">
+          <button class="inner">
+            <div class="rectangle-container">
+              <div class="rectangle-div"></div>
+              <div class="div24">график</div>
+            </div>
+          </button>
+          <div class="child"></div>
+          <div class="ellipse-parent1">
+            <img
+              class="ellipse-icon"
+              alt=""
+              src="{% static 'name/img/flags/icons8_круговой_флаг_европейского_союза_48.png' %}"
+            />
+
+            <div class="usdrub">
+              <p class="p" style="width: 200px">Евро</p>
+              <p class="usdrub1">EURRUB</p>
+            </div>
+          </div>
+          <div class="div32">{{ EURO_RUB }} ₽ </div>
+          <div class="div33">
+            <p class="p">-9,14%</p>
+            <p class="p">0,91%</p>
+          </div>
+          <div class="div34">
+            <p class="p">-2,10%</p>
+            <p class="p">0,93%</p>
+          </div>
+        </div>
+        <div class="div55">
+          <button class="inner">
+            <div class="rectangle-container">
+              <div class="rectangle-div"></div>
+              <div class="div24">график</div>
+            </div>
+          </button>
+          <div class="child"></div>
+          <div class="ellipse-parent1">
+            <img
+              class="ellipse-icon"
+              alt=""
+              src="{% static 'name/img/flags/icons8-беларусь-48.png' %}"
+            />
+
+            <div class="usdrub">
+              <p class="p" style="width: 200px">Белорусский рубль</p>
+              <p class="usdrub1">BELRUB</p>
+            </div>
+          </div>
+          <div class="div32">{{ BELRUB_RUB }} ₽ </div>
+          <div class="div33">
+            <p class="p">-5,10%</p>
+            <p class="p">0,78%</p>
+          </div>
+          <div class="div34">
+            <p class="p">-2,10%</p>
+            <p class="p">0,38%</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+.xxl,
+.xl,
+.l,
+.m,
+.s,
+.xs,
+.xxs {
+	width: fit-content;
+	margin: 0;
+
+	color: var(--dark);
+}
+
+.xxl {
+	letter-spacing: 4.6px;
+
+	font-size: 92px;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 115%;
+}
+
+.xl {
+	font-size: 56px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 100%;
+}
+
+.l {
+	font-size: 36px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 115%;
+}
+
+.m {
+	font-size: 32px;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 120%;
+}
+
+.s {
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 100%;
+}
+
+.xs {
+	font-size: 16px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 21px;
+}
+
+.xxs {
+	font-size: 0.65rem;
+	font-weight: 400;
+	line-height: 1rem;
+}
+
+@media (max-width: 1024px) {
+	.xxl {
+		font-size: 50px;
+	}
+
+	.xl {
+		font-size: 44px;
+	}
+
+	.l {
+		font-size: 28px;
+	}
+
+	.m {
+		font-size: 26px;
+	}
+
+	.s {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 580px) {
+	.xxl {
+		font-size: 30px;
+	}
+
+	.xl {
+		font-size: 32px;
+	}
+
+	.l {
+		font-size: 22px;
+	}
+
+	.m {
+		font-size: 20px;
+	}
+
+	.s {
+		font-size: 14px;
+	}
+
+	.xs {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 450px) {
+	.l {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 320px) {
+	.xxl {
+		font-size: 20px;
+	}
+
+	.xl {
+		font-size: 30px;
+	}
+
+	.l {
+		font-size: 16px;
+	}
+
+	.m {
+		font-size: 14px;
+	}
+
+	.s {
+		font-size: 10px;
+	}
+}

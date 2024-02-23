@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ru.goalgomoex.goalgomoex.controllers.api.v1","l":"RestScriptConfController"}];updateSearchResults();

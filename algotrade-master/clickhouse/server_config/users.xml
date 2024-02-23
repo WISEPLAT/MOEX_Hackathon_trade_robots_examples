@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<yandex incl="base_users_config">
+    <users>
+        <user>
+            <profile>default</profile>
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <password from_env="CH_PASSWORD"></password>
+            <quota>default</quota>
+        </user>
+    </users>
+</yandex>

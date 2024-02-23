@@ -1,0 +1,245 @@
+CREATE DATABASE IF NOT EXISTS algotrade;
+CREATE DATABASE IF NOT EXISTS algotrade_replica;
+
+CREATE TABLE IF NOT EXISTS algotrade.candles
+(
+    id                      UUID,
+    secid                   String,
+    open                    Float64,
+    close                   Float64,
+    high                    Float64,
+    low                     Float64,
+    value                   Float64,
+    volume                  Float64,
+    begin                   DateTime,
+    end                     DateTime,
+    created_at              DateTime  DEFAULT now()
+)
+Engine=ReplicatedMergeTree('{{ node.ALGOTRADE.REPLICA_PATH }}/candles', '{{ node.ALGOTRADE.REPLICA_NAME }}')
+PARTITION BY toYYYYMMDD(created_at)
+ORDER BY (id);
+
+
+CREATE TABLE IF NOT EXISTS algotrade.tradestats
+(
+    id                      UUID,
+    secid                   String,
+    ts                      DateTime,
+    pr_open                 Float64,
+    pr_high                 Float64,
+    pr_low                  Float64,
+    pr_close                Float64,
+    pr_change               Float64,
+    trades                  Nullable(UInt64),
+    vol                     Nullable(UInt64),
+    val                     Nullable(Float64),
+    pr_std                  Nullable(Float64),
+    disb                    Nullable(Float64),
+    pr_vwap                 Nullable(Float64),
+    trades_b                Nullable(UInt64),
+    vol_b                   Nullable(UInt64),
+    val_b                   Nullable(Float64),
+    pr_vwap_b               Nullable(Float64),
+    trades_s                Nullable(UInt64),
+    vol_s                   Nullable(UInt64),
+    val_s                   Nullable(Float64),
+    pr_vwap_s               Nullable(Float64),
+    created_at              DateTime  DEFAULT now()
+)
+Engine=ReplicatedMergeTree('{{ node.ALGOTRADE.REPLICA_PATH }}/tradestats', '{{ node.ALGOTRADE.REPLICA_NAME }}')
+PARTITION BY toYYYYMMDD(created_at)
+ORDER BY (id);
+
+
+CREATE TABLE IF NOT EXISTS algotrade.orderstats
+(
+    id                      UUID,
+    secid                   String,
+    ts                      DateTime,
+    put_orders              Nullable(UInt64),
+    put_orders_b            Nullable(UInt64),
+    put_orders_s            Nullable(UInt64),
+    put_vol                 Nullable(UInt64),
+    put_vol_b               Nullable(UInt64),
+    put_vol_s               Nullable(UInt64),
+    put_val                 Nullable(Float64),
+    put_val_b               Nullable(Float64),
+    put_val_s               Nullable(Float64),
+    cancel_orders           Nullable(UInt64),
+    cancel_orders_b         Nullable(UInt64),
+    cancel_orders_s         Nullable(UInt64),
+    cancel_vol              Nullable(UInt64),
+    cancel_vol_b            Nullable(UInt64),
+    cancel_vol_s            Nullable(UInt64),
+    cancel_val              Nullable(Float64),
+    cancel_val_b            Nullable(Float64),
+    cancel_val_s            Nullable(Float64),
+    put_vwap_b              Nullable(Float64),
+    put_vwap_s              Nullable(Float64),
+    cancel_vwap_b           Nullable(Float64),
+    cancel_vwap_s           Nullable(Float64),
+    created_at              DateTime  DEFAULT now()
+)
+Engine=ReplicatedMergeTree('{{ node.ALGOTRADE.REPLICA_PATH }}/orderstats', '{{ node.ALGOTRADE.REPLICA_NAME }}')
+PARTITION BY toYYYYMMDD(created_at)
+ORDER BY (id);
+
+
+CREATE TABLE IF NOT EXISTS algotrade.obstats
+(
+    id                      UUID,
+    secid                   String,
+    ts                      DateTime,
+    spread_bbo              Nullable(Float64),
+    spread_lv10             Nullable(Float64),
+    spread_1mio             Nullable(Float64),
+    levels_b                Nullable(UInt64),
+    levels_s                Nullable(UInt64),
+    vol_b                   Nullable(UInt256),
+    vol_s                   Nullable(UInt256),
+    val_b                   Nullable(Float64),
+    val_s                   Nullable(Float64),
+    imbalance_vol           Nullable(Float64),
+    imbalance_vol_bbo       Nullable(Float64),
+    imbalance_val           Nullable(Float64),
+    imbalance_val_bbo       Nullable(Float64),
+    vwap_b                  Nullable(Float64),
+    vwap_s                  Nullable(Float64),
+    vwap_b_1mio             Nullable(Float64),
+    vwap_s_1mio             Nullable(Float64),
+    created_at              DateTime  DEFAULT now()
+)
+Engine=ReplicatedMergeTree('{{ node.ALGOTRADE.REPLICA_PATH }}/obstats', '{{ node.ALGOTRADE.REPLICA_NAME }}')
+PARTITION BY toYYYYMMDD(created_at)
+ORDER BY (id);
+
+
+CREATE TABLE IF NOT EXISTS algotrade.predictions
+(
+    id                      UUID,
+    secid                   String,
+    algorithm               String,
+    value                   Float64,
+    timestamp               DateTime,
+    created_at              DateTime  DEFAULT now()
+)
+Engine=ReplicatedMergeTree('{{ node.ALGOTRADE.REPLICA_PATH }}/predictions', '{{ node.ALGOTRADE.REPLICA_NAME }}')
+PARTITION BY toYYYYMMDD(created_at)
+ORDER BY (id);
+
+
+CREATE TABLE IF NOT EXISTS default.candles
+(
+    id                      UUID,
+    secid                   String,
+    open                    Float64,
+    close                   Float64,
+    high                    Float64,
+    low                     Float64,
+    value                   Float64,
+    volume                  Float64,
+    begin                   DateTime,
+    end                     DateTime,
+    created_at              DateTime  DEFAULT now()
+)
+ENGINE = Distributed({{ node.CLUSTER }}, '', candles, rand());
+
+
+CREATE TABLE IF NOT EXISTS default.tradestats
+(
+    id                      UUID,
+    secid                   String,
+    ts                      DateTime,
+    pr_open                 Float64,
+    pr_high                 Float64,
+    pr_low                  Float64,
+    pr_close                Float64,
+    pr_change               Float64,
+    trades                  Nullable(UInt64),
+    vol                     Nullable(UInt64),
+    val                     Nullable(Float64),
+    pr_std                  Nullable(Float64),
+    disb                    Nullable(Float64),
+    pr_vwap                 Nullable(Float64),
+    trades_b                Nullable(UInt64),
+    vol_b                   Nullable(UInt64),
+    val_b                   Nullable(Float64),
+    pr_vwap_b               Nullable(Float64),
+    trades_s                Nullable(UInt64),
+    vol_s                   Nullable(UInt64),
+    val_s                   Nullable(Float64),
+    pr_vwap_s               Nullable(Float64),
+    created_at              DateTime  DEFAULT now()
+)
+ENGINE = Distributed({{ node.CLUSTER }}, '', tradestats, rand());
+
+
+CREATE TABLE IF NOT EXISTS default.orderstats
+(
+    id                      UUID,
+    secid                   String,
+    ts                      DateTime,
+    put_orders              Nullable(UInt64),
+    put_orders_b            Nullable(UInt64),
+    put_orders_s            Nullable(UInt64),
+    put_vol                 Nullable(UInt256),
+    put_vol_b               Nullable(UInt256),
+    put_vol_s               Nullable(UInt256),
+    put_val                 Nullable(Float64),
+    put_val_b               Nullable(Float64),
+    put_val_s               Nullable(Float64),
+    cancel_orders           Nullable(UInt64),
+    cancel_orders_b         Nullable(UInt64),
+    cancel_orders_s         Nullable(UInt64),
+    cancel_vol              Nullable(UInt256),
+    cancel_vol_b            Nullable(UInt256),
+    cancel_vol_s            Nullable(UInt256),
+    cancel_val              Nullable(Float64),
+    cancel_val_b            Nullable(Float64),
+    cancel_val_s            Nullable(Float64),
+    put_vwap_b              Nullable(Float64),
+    put_vwap_s              Nullable(Float64),
+    cancel_vwap_b           Nullable(Float64),
+    cancel_vwap_s           Nullable(Float64),
+    created_at              DateTime  DEFAULT now()
+)
+ENGINE = Distributed({{ node.CLUSTER }}, '', orderstats, rand());
+
+
+CREATE TABLE IF NOT EXISTS default.obstats
+(
+    id                      UUID,
+    secid                   String,
+    ts                      DateTime,
+    spread_bbo              Nullable(Float64),
+    spread_lv10             Nullable(Float64),
+    spread_1mio             Nullable(Float64),
+    levels_b                Nullable(UInt64),
+    levels_s                Nullable(UInt64),
+    vol_b                   Nullable(UInt256),
+    vol_s                   Nullable(UInt256),
+    val_b                   Nullable(Float64),
+    val_s                   Nullable(Float64),
+    imbalance_vol           Nullable(Float64),
+    imbalance_vol_bbo       Nullable(Float64),
+    imbalance_val           Nullable(Float64),
+    imbalance_val_bbo       Nullable(Float64),
+    vwap_b                  Nullable(Float64),
+    vwap_s                  Nullable(Float64),
+    vwap_b_1mio             Nullable(Float64),
+    vwap_s_1mio             Nullable(Float64),
+    created_at              DateTime  DEFAULT now()
+)
+ENGINE = Distributed({{ node.CLUSTER }}, '', obstats, rand());
+
+
+CREATE TABLE IF NOT EXISTS default.predictions
+(
+    id                      UUID,
+    secid                   String,
+    algorithm               String,
+    value                   Float64,
+    timestamp               DateTime,
+    created_at              DateTime  DEFAULT now()
+)
+ENGINE = Distributed({{ node.CLUSTER }}, '', predictions, rand());

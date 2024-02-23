@@ -1,0 +1,38 @@
+.wrapper {
+    max-width: var(--wrapper-width);
+    width: 100%;
+    padding: 40px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    position: relative;
+}
+
+.params {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+
+.params > div{
+    flex: 40%;
+    min-width: 250px;
+}
+
+.chart {
+    width: 50%;
+    margin: auto;
+}
+
+.chartName{
+    text-align: center;
+    margin: auto;
+}
+
+@media (max-width: 650px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}

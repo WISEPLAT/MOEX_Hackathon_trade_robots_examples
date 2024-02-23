@@ -1,0 +1,6 @@
+<clickhouse>
+    <macros>
+        <shard from_env="CH_NODE_SHARD_ID"/>
+        <replica from_env="CH_NODE_REPLICA_NAME"/>
+    </macros>
+</clickhouse>

@@ -1,0 +1,24 @@
+<div
+  class="percent"
+  [ngClass]="{
+    'percent--up': percent > 0,
+    'percent--down': percent < 0
+  }"
+>
+  <div class="percent__direction">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="8"
+      height="6"
+      viewBox="0 0 8 6"
+      fill="none"
+      *ngIf="percent !== 0"
+    >
+      <path
+        d="M4.83205 4.75192C4.43623 5.34566 3.56377 5.34566 3.16795 4.75192L1.03647 1.5547C0.59343 0.890145 1.06982 0 1.86852 0L6.13148 0C6.93018 0 7.40657 0.890145 6.96353 1.5547L4.83205 4.75192Z"
+        fill="white"
+      />
+    </svg>
+  </div>
+  <div class="percent__value">{{ percent < 0 ? percent * -1 : percent }}%</div>
+</div>

@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Arial Black';
+    src: url('./fonts/Arial-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Arial';
+    font-weight: bold;
+    src: url('./fonts/Arial-BoldMT.ttf');
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('./fonts/ArialMT.ttf');
+}
+
+:root {
+    --vh: 1px;
+    --red-main-color: #B42F20;
+    --main-background-color: #F5F7F9;
+
+    --wrapper-width: 1300px;
+
+    --middle-size: 18px;
+    --small-size: 10px;
+    --large-size: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, serif;
+    padding: 0;
+    margin: 0;
+    background-color: var(--main-background-color);
+    min-height: 100vh;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}

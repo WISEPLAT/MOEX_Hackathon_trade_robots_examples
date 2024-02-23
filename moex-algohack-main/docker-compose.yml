@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  goalgo_frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+
+  django_backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"

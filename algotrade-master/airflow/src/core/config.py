@@ -1,0 +1,220 @@
+from typing import Any
+
+import backoff
+from pydantic import Field
+from pydantic_settings import BaseSettings
+
+
+class PostgresSettings(BaseSettings):
+    USER: str
+    PASSWORD: str
+    HOST: str
+    PORT: int
+    NAME: str
+    SCHEMA: str
+
+    class Config:
+        env_prefix = "DB_"
+
+    def dsn(self) -> dict[str, Any]:
+        return {
+            "dbname": self.NAME,
+            "user": self.USER,
+            "password": self.PASSWORD,
+            "host": self.HOST,
+            "port": self.PORT,
+        }
+
+
+class RedisSettings(BaseSettings):
+    PASSWORD: str
+    HOST: str
+    PORT: int
+    CACHE_EXPIRE: int
+
+    class Config:
+        env_prefix = "REDIS_"
+
+
+class ClickhouseSettings(BaseSettings):
+    NODES: str
+    INIT_TABLE: str
+    INIT_DATA: bool = Field(False)
+    INIT_DATA_PATH: str | None
+
+    @classmethod
+    def parse_env_var(cls, field_name: str, raw_val: str) -> Any:
+        if field_name.upper() == "NODES":
+            return [x for x in raw_val.split(",")]
+        return cls.json_loads(raw_val)
+
+    class Config:
+        env_prefix = "CH_"
+
+
+class AlgotradeSettingsNode01(BaseSettings):
+    DISTRIBUTED_TABLE: str
+    REPLICA_PATH: str
+    REPLICA_NAME: str
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE01_ALGOTRADE_"
+
+
+class ClickhouseNode01(BaseSettings):
+    HOST: str
+    PORT: int
+    USER: str
+    PASSWORD: str
+    CLUSTER: str
+    STATUS_ROUTE: BaseSettings = Field(default_factory=AlgotradeSettingsNode01)
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE01_"
+
+
+class AlgotradeSettingsNode02(BaseSettings):
+    DISTRIBUTED_TABLE: str
+    REPLICA_PATH: str
+    REPLICA_NAME: str
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE02_ALGOTRADE_"
+
+
+class ClickhouseNode02(BaseSettings):
+    HOST: str
+    PORT: int
+    USER: str
+    PASSWORD: str
+    CLUSTER: str
+    STATUS_ROUTE: BaseSettings = Field(default_factory=AlgotradeSettingsNode02)
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE02_"
+
+
+class AlgotradeSettingsNode03(BaseSettings):
+    DISTRIBUTED_TABLE: str
+    REPLICA_PATH: str
+    REPLICA_NAME: str
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE03_ALGOTRADE_"
+
+
+class ClickhouseNode03(BaseSettings):
+    HOST: str
+    PORT: int
+    USER: str
+    PASSWORD: str
+    CLUSTER: str
+    STATUS_ROUTE: BaseSettings = Field(default_factory=AlgotradeSettingsNode03)
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE03_"
+
+
+class AlgotradeSettingsNode04(BaseSettings):
+    DISTRIBUTED_TABLE: str
+    REPLICA_PATH: str
+    REPLICA_NAME: str
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE04_ALGOTRADE_"
+
+
+class ClickhouseNode04(BaseSettings):
+    HOST: str
+    PORT: int
+    USER: str
+    PASSWORD: str
+    CLUSTER: str
+    STATUS_ROUTE: BaseSettings = Field(default_factory=AlgotradeSettingsNode04)
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE04_"
+
+
+class AlgotradeSettingsNode05(BaseSettings):
+    DISTRIBUTED_TABLE: str
+    REPLICA_PATH: str
+    REPLICA_NAME: str
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE05_ALGOTRADE_"
+
+
+class ClickhouseNode05(BaseSettings):
+    HOST: str
+    PORT: int
+    USER: str
+    PASSWORD: str
+    CLUSTER: str
+    STATUS_ROUTE: BaseSettings = Field(default_factory=AlgotradeSettingsNode05)
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE05_"
+
+
+class AlgotradeSettingsNode06(BaseSettings):
+    DISTRIBUTED_TABLE: str
+    REPLICA_PATH: str
+    REPLICA_NAME: str
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE06_ALGOTRADE_"
+
+
+class ClickhouseNode06(BaseSettings):
+    HOST: str
+    PORT: int
+    USER: str
+    PASSWORD: str
+    CLUSTER: str
+    STATUS_ROUTE: BaseSettings = Field(default_factory=AlgotradeSettingsNode06)
+
+    class Config:
+        env_prefix = "CLICKHOUSE_NODE06_"
+
+
+class SparkSettings(BaseSettings):
+    DRIVER: str
+    HOST: str
+    PORT: int
+
+    class Config:
+        env_prefix = 'SPARK_MASTER_'
+
+
+class HDFSSettings(BaseSettings):
+    DRIVER: str
+    HOST: str
+    PORT: int
+    PATH: str
+
+    class Config:
+        env_prefix = 'HDFS_'
+
+
+NODES = [
+    ClickhouseNode01(),
+    ClickhouseNode02(),
+    ClickhouseNode03(),
+    ClickhouseNode04(),
+    ClickhouseNode05(),
+    ClickhouseNode06(),
+]
+
+CLICKHOUSE_CONFIG: ClickhouseSettings = ClickhouseSettings()
+
+REDIS_CONFIG = RedisSettings()
+POSTGRES_CONFIG = PostgresSettings()
+HDFS_CONFIG = HDFSSettings()
+SPARK_CONFIG = SparkSettings()
+
+BACKOFF_CONFIG: dict[str, Any] = {
+    "wait_gen": backoff.expo,
+    "exception": Exception,
+    "max_value": 8,
+}

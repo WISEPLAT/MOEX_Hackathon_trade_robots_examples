@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="m-2"><h4>Trading</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Trading_stock_list' %}">stock Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Trading_strategy_list' %}">strategy Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Trading_trader_list' %}">trader Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'Trading_trading_history_list' %}">trading_history Listing</a></div>
+{% endblock %}

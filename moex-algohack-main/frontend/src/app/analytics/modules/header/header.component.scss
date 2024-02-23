@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,71 @@
+<yandex>
+    <dictionary>
+        <name>default.malware_signatures</name>
+        <structure>
+            <key>
+                <attribute>
+                    <name>id</name>
+                    <type>UUID</type>
+                </attribute>
+            </key>
+            <attribute>
+                <name>domain_name</name>
+                <type>String</type>
+                <null_value></null_value>
+            </attribute>
+            <attribute>
+                <name>source</name>
+                <type>String</type>
+                <null_value></null_value>
+            </attribute>
+            <attribute>
+                <name>severity</name>
+                <type>String</type>
+                <null_value></null_value>
+            </attribute>
+            <attribute>
+                <name>classification</name>
+                <type>String</type>
+                <null_value></null_value>
+            </attribute>
+            <attribute>
+                <name>created_at</name>
+                <type>Timestamp</type>
+                <null_value></null_value>
+            </attribute>
+            <attribute>
+                <name>updated_at</name>
+                <type>Timestamp</type>
+                <null_value></null_value>
+            </attribute>
+        </structure>
+
+        <source>
+            <postgresql>
+                <host from_env="DB_HOST"/>
+                <port from_env="DB_PORT"/>
+                <user from_env="DB_USER"/>
+                <password from_env="DB_PASSWORD"/>
+                <database from_env="DB_NAME"/>
+                <table>content.iocs</table>
+                <!-- <replica>
+                    <host>postgres</host>
+                </replica>
+                <invalidate_query>SELECT now()</invalidate_query> -->
+            </postgresql>
+        </source>
+
+        <lifetime>
+            <min>10</min>
+            <max>20</max>
+        </lifetime>
+
+        <layout>
+            <complex_key_hashed>
+                <shards>3</shards>
+                <shard_load_queue_backlog>10000</shard_load_queue_backlog>
+                <max_load_factor>0.5</max_load_factor>
+            </complex_key_hashed>
+        </layout>
+    </dictionary>
+</yandex>

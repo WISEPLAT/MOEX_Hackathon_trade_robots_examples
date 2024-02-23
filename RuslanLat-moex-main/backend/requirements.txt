@@ -1,0 +1,10 @@
+aiohttp
+aiohttp-apispec
+aiohttp-session
+alembic
+asyncpg
+cryptography
+lxml
+marshmallow
+PyYAML
+SQLAlchemy

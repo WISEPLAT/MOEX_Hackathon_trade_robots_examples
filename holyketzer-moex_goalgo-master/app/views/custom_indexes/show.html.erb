@@ -1,0 +1,121 @@
+<h1><%= @custom_index.name %></h1>
+
+<% @settings = @custom_index.settings %>
+
+<% if @custom_index.status != "done" %>
+  <script>
+    setTimeout(function() {
+      window.location.reload();
+    }, 2500);
+  </script>
+
+  <div class="alert alert-warning" role="alert">
+    Индекс считается. Пожалуйста, подождите...
+  </div>
+  <div class="progress">
+    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: <%= @custom_index.progress %>%" aria-valuenow="<%= @custom_index.progress %>" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+<% end %>
+
+<% if @custom_index.status == "done" && @custom_index.error != nil %>
+  <div class="alert alert-danger" role="alert">
+    <%= @custom_index.error %>
+  </div>
+<% end %>
+
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th scope="row">Формирование базы расчёта</th>
+      <td><%= @settings[IndexCalculator::REVIEW_PERIOD] == IndexCalculator::REVIEW_PERIOD_Q ? "раз в квартал" : "раз в год" %></td>
+    </tr>
+    <% @settings[IndexCalculator::FILTERS].each do |filter_key, filter_value| %>
+      <tr>
+        <% if filter_key == IndexCalculator::FILTERS_LL %>
+          <th scope="row">Фильтр по уровню листинга</th>
+          <td><%= filter_value.map(&:to_s).join(", ") %></td>
+        <% elsif filter_key == IndexCalculator::FILTERS_SECTOR %>
+          <th scope="row">Фильтр по секторам</th>
+          <td><%= ShareSector.where(id: filter_value).order(:name).pluck(:name).join(", ") %></td>
+        <% elsif filter_key == IndexCalculator::FILTERS_TICKERS %>
+          <th scope="row">Фильтр по акциям</th>
+          <td><%= filter_value.join(", ") %></td>
+        <% end %>
+      </tr>
+    <% end %>
+    <tr>
+      <th scope="row">Отбор в индекс</th>
+      <% selection_key, selection_value = *@settings[IndexCalculator::SELECTION] %>
+      <% if selection_key == IndexCalculator::SELECTION_MARKET_CAP %>
+        <td>Топ <%= selection_value[IndexCalculator::SELECTION_TOP] %> капитализации</td>
+      <% else %>
+        <td>Моментум за последние <%= selection_value[IndexCalculator::SELECTION_PERIOD] %> дней относительно <%= selection_value[IndexCalculator::SELECTION_BENCHMARK] %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <th scope="row">Взвешивание</th>
+      <td><%= @settings[IndexCalculator::WEIGHING] == IndexCalculator::WEIGHING_EQUAL ? "Равное" : "По рыночной капитализации" %></td>
+    </tr>
+  </tbody>
+</table>
+
+<% if @custom_index.avg_yr %>
+  <h2>Статистика</h2>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td></td>
+        <th>Этот индекс</th>
+        <th class="text-secondary">IMOEX</th>
+      </tr>
+      <tr>
+        <th scope="row">Среднегодовая доходность</th>
+        <td><%= @custom_index.avg_yr.round(2) %>%</td>
+        <td class="text-secondary"><%= @bm_stat.avg_yr.round(2) %>%</td>
+      </tr>
+      <tr>
+        <th scope="row">Среднемесячная доходность</th>
+        <td><%= @custom_index.avg_mr.round(2) %>%</td>
+        <td class="text-secondary"><%= @bm_stat.avg_mr.round(2) %>%</td>
+      </tr>
+      <tr>
+        <th scope="row">Максимальная просадка за год</th>
+        <td><%= @custom_index.max_yd.round(2) %>%</td>
+        <td class="text-secondary"><%= @bm_stat.max_yd.round(2) %>%</td>
+      </tr>
+      <tr>
+        <th scope="row">Максимальная просадка за месяц</th>
+        <td><%= @custom_index.max_md.round(2) %>%</td>
+        <td class="text-secondary"><%= @bm_stat.max_md.round(2) %>%</td>
+      </tr>
+      <tr>
+        <th scope="row">Стандартное отклонение</th>
+        <td><%= @custom_index.rsd.round(2) %>%</td>
+        <td class="text-secondary"><%= @bm_stat.rsd.round(2) %>%</td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
+
+<%= render partial: "chart", locals: { price_lines: @price_lines, benchmark: @benchmark } %>
+
+<% if @custom_index_items&.size > 0 %>
+  <h2>Состав индекса по периодам</h2>
+  <table class="table table-striped">
+    <tbody>
+      <% @custom_index_items.each do |date, custom_index_items| %>
+        <tr>
+          <th scope="row" class="index-date"><%= date %></th>
+          <td>
+            <% custom_index_items.sort_by { |x| [-x.weight, x.share.secid] }.each do |custom_index_item| %>
+              <%= custom_index_item.share.secid %>
+              <strong>
+                <%= (custom_index_item.weight*100).to_f.round(2) %>%
+              </strong>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

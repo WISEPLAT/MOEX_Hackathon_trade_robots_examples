@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Securities</title>
+    <link rel="stylesheet" href="../portfolio_allocation/report/resources/main.css">
+</head>
+<body>
+<div id="container">
+    <div id="settings">
+        <label for="allocationBy">Allocate by</label> <select id="allocationBy"></select>
+    </div>
+    <div id="chartContainer">
+        <canvas id="chart" class="chart"></canvas>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.min.js"></script>
+<script src="../portfolio_allocation/report/resources/main.js"></script>
+<script>
+    init('en-US', 'RUB', [
+        {
+            "instrument": "USD",
+            "quantity": 10000.0,
+            "countries": {
+                "United States": 1
+            },
+            "industries": {},
+            "fee": 0,
+            "currencies": {
+                "USD": 1
+            },
+            "classes": {
+                "Cash": 1
+            }
+        },
+        {
+            "instrument": "RUB",
+            "quantity": 10000.0,
+            "countries": {
+                "Russian Federation": 1
+            },
+            "industries": {},
+            "fee": 0,
+            "currencies": {
+                "RUB": 1
+            },
+            "classes": {
+                "Cash": 1
+            }
+        },
+        {
+            "instrument": "CNY",
+            "quantity": 10000.0,
+            "countries": {
+                "China": 1
+            },
+            "industries": {},
+            "fee": 0,
+            "currencies": {
+                "CNY": 1
+            },
+            "classes": {
+                "Cash": 1
+            }
+        },
+        {
+            "instrument": "FXCN",
+            "quantity": 10000.0,
+            "countries": {
+                "China": 1
+            },
+            "industries": {
+                "Финансы": 0.175615,
+                "Материалы": 0.018948,
+                "Энергетика": 0.025162,
+                "Недвижимость": 0.035624,
+                "Промышленность": 0.041411,
+                "Здравоохранение": 0.047857,
+                "Коммунальные услуги": 0.021513,
+                "Коммуникационные услуги": 0.236829,
+                "Информационные технологии": 0.035861,
+                "Потребительские товары выборочного спроса": 0.336596,
+                "Потребительские товары повседневного спроса": 0.024584
+            },
+            "fee": 0.009,
+            "currencies": {
+                "USD": 1
+            },
+            "classes": {
+                "Акции": 1
+            }
+        },
+        {
+            "instrument": "FXRL",
+            "quantity": 10000.0,
+            "countries": {
+                "Russian Federation": 1
+            },
+            "industries": {
+                "Финансы": 0.195471,
+                "Материалы": 0.200254,
+                "Энергетика": 0.413631,
+                "Промышленность": 0.009654,
+                "Коммунальные услуги": 0.0211,
+                "Коммуникационные услуги": 0.08702,
+                "Потребительские товары выборочного спроса": 0.027594,
+                "Потребительские товары повседневного спроса": 0.045276
+            },
+            "fee": 0.009,
+            "currencies": {
+                "USD": 1
+            },
+            "classes": {
+                "Акции": 1
+            }
+        },
+        {
+            "instrument": "FXWO",
+            "quantity": 10000.0,
+            "countries": {
+                "United States": 0.414841,
+                "China": 0.028645,
+                "Japan": 0.173868,
+                "Germany": 0.190179,
+                "Australia": 0.124656,
+                "United Kingdom": 0.06781
+            },
+            "industries": {
+                "Финансы": 0.143377,
+                "Материалы": 0.059042,
+                "Энергетика": 0.026502,
+                "Недвижимость": 0.011788,
+                "Промышленность": 0.102871,
+                "Здравоохранение": 0.094939,
+                "Коммунальные услуги": 0.016698,
+                "Коммуникационные услуги": 0.104514,
+                "Информационные технологии": 0.284399,
+                "Потребительские товары выборочного спроса": 0.102217,
+                "Потребительские товары повседневного спроса": 0.053654
+            },
+            "fee": 0.0136,
+            "currencies": {
+                "USD": 1
+            },
+            "classes": {
+                "Акции": 1
+            }
+        },
+        {
+            "instrument": "FXGD",
+            "quantity": 10000.0,
+            "countries": {},
+            "industries": null,
+            "fee": 0.0045,
+            "currencies": {
+                "USD": 1
+            },
+            "classes": {
+                "Биржевые товары": 1
+            }
+        },
+        {
+            "instrument": "TMOS",
+            "quantity": 10000.0,
+            "countries": {
+                "Russian Federation": 1.0
+            },
+            "industries": {
+                "Энергетика": 0.4286,
+                "Финансовый сектор": 0.2272,
+                "Сырьевая промышленность": 0.1838,
+                "Телекоммуникации": 0.0808,
+                "Потребительские товары": 0.0568,
+                "Электроэнергетика": 0.0174,
+                "Машиностроение и транспорт": 0.005,
+                "Денежные средства": 0.0004
+            },
+            "fee": 0.79,
+            "currencies": {
+                "RUB": 1
+            },
+            "classes": {
+                "Акции": 1.0
+            }
+        }
+    ])
+</script>
+</body>
+</html>

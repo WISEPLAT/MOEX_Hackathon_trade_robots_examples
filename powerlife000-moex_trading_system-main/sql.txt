@@ -1,0 +1,68 @@
+CREATE TABLE public.robot_logs
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	robot_name varchar(255) NOT NULL,
+	ticket integer,
+	order_id integer,
+	time integer,
+	time_msc integer,
+	type integer,
+	entry integer,
+	magic integer,
+	position_id integer,
+	reason integer,
+	volume float,
+	price float,
+	commission float,
+	swap float,
+	profit float,
+	fee integer,
+	symbol varchar(255),
+	comment varchar(255),
+	external_id integer,
+	created_at timestamp DEFAULT now()
+);
+
+
+CREATE TABLE public.robot_tasks
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	robot_name varchar(255) NOT NULL,
+	task_type varchar(255),
+	ticker varchar(255),
+	volume float,
+	max_order_volume  float,
+	limit_odrer_type BOOLEAN,
+	stop_loss float,
+	status varchar(255),
+	date timestamp,
+	created_at timestamp DEFAULT now()
+);
+
+CREATE TABLE public.robot_orders_tasks
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	robot_name varchar(255) NOT NULL,
+	ticker varchar(255),
+	type varchar(255),
+	volume float,
+	limit_odrer_type BOOLEAN,
+	stop_loss float,
+	status varchar(255),
+	time timestamp,
+	created_at timestamp DEFAULT now()
+);
+
+CREATE TABLE public.cals_signals_results
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    PRIMARY KEY (id),
+	task_id integer NOT NULL,
+	ticker varchar(50) NOT NULL,
+	signal integer NOT NULL,
+	signal_position integer NOT NULL,
+	created_at timestamp DEFAULT now()
+);

@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn
+catboost
+lightgbm
+moexalgo
+backtesting
+termcolor

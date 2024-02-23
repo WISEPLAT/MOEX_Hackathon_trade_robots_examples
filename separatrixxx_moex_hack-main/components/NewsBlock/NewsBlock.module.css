@@ -1,0 +1,7 @@
+.newsBlock {
+	width: 100%;
+	height: 600px;
+
+	border-radius: 10px;
+	background: var(--white);
+}

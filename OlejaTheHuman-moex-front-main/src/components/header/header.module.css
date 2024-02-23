@@ -1,0 +1,36 @@
+.wrapper {
+    width: 100%;
+    height: 80px;
+    padding: 20px 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.logo{
+    position: absolute;
+    left: 60px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title span:last-child {
+    font-size: 15px;
+}
+
+@media (max-width: 500px) {
+    .logo{
+        position: absolute;
+        left: 20px;
+    }
+}

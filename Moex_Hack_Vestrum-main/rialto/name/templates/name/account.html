@@ -1,0 +1,207 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'name/css/account/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/account/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/super_global.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Barcode 128 Text:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="div">
+      <div class="div1">
+        <div class="component-6">
+          <div class="group-parent">
+            <img
+              class="vuesaxlinearmenu-icon"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearmenu.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'dashboard' %}">Инструменты</a>
+          </div>
+          <div class="frame-parent">
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlineartrade.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'newsline' %}">Лента</a>
+            </div>
+            <div class="component-31">
+              <div class="vuesaxlinearmenu">
+                <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/account/vuesaxlinearuser.svg' %}"
+                />
+
+                <img
+                  class="vuesaxlinearmenu-icon1"
+                  alt=""
+                  src="./public/vuesaxlinearmenu1.svg"
+                />
+              </div>
+              <div class="div5">Аккаунт</div>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearwallet2.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'wallet' %}">Кошелек</a>
+            </div>
+          </div>
+          <div class="group-parent">
+            <img
+              class="frame-child"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'catalogue' %}">Каталог</a>
+          </div>
+        </div>
+        <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}" />
+      </div>
+      <header class="header">
+        <div class="vector-parent">
+          <img class="vector-icon" alt="" src="{% static 'name/img/global/vector.svg' %}"  />
+
+          <div class="vestrum-wrapper">
+            <div class="vestrum">vestrum</div>
+          </div>
+        </div>
+        <div class="div8"><div>
+
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
+        <div class="parent">
+          <div class="div9">
+            <div class="vuesaxlinearsearch-normal">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearsearchnormal.svg' %}"
+              />
+            </div>
+            <i class="i">Введите поисковый запрос</i>
+          </div>
+          <div class="frame-wrapper">
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="ellipse-parent">
+                  <img
+                    class="frame-item"
+                    alt=""
+                    src="{% static 'name/img/global/ellipse-3212@2x.png' %}"
+                  />
+
+                  <div class="group">
+                    <div class="vestrum">Кураж</div>
+                    <img class="icons" alt="" src="{% static 'name/img/global/icons.svg' %}"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="trade-parent">
+        <img class="trade-icon" alt="" src="{% static 'name/img/account/trade.svg' %}" />
+
+        <div class="container">
+          <h3 class="h3">Аватар</h3>
+          <div class="lorem-ipsum-dolor">
+            Вы можете изменить аватар в любое время. Аватар виден только вам
+          </div>
+        </div>
+        <img
+          class="instance-child"
+          alt=""
+          src="{% static 'name/img/global/ellipse-3212@2x.png' %}"
+        />
+
+        <button class="button">
+          <div class="div11">Изменить</div>
+        </button>
+      </div>
+      <div class="trade-group">
+        <img class="trade-icon1" alt="" src="{% static 'name/img/account/trade.svg' %}" />
+
+        <div class="parent1">
+          <h3 class="h31">Аналитика</h3>
+          <div class="div12">
+            Вы можете подключить глубокую аналитику с использованием машинного
+            обучения
+          </div>
+        </div>
+        <div class="rectangle-parent">
+          <div class="group-child"></div>
+          <div class="group-item"></div>
+          <div class="div13">выкл</div>
+          <div class="div14">вкл</div>
+        </div>
+      </div>
+      <div class="trade-container">
+        <img class="trade-icon1" alt="" src="{% static 'name/img/account/trade.svg' %}" />
+
+        <div class="parent1">
+          <h3 class="h32">Информационные рассылки</h3>
+          <div class="div12">
+            Разрешите отправку вам маркетинговых уведомлений, чтобы оставаться в
+            курсе обновлений платформы
+          </div>
+        </div>
+        <div class="rectangle-parent">
+          <div class="group-child"></div>
+          <div class="group-item"></div>
+          <div class="div13">выкл</div>
+          <div class="div14">вкл</div>
+        </div>
+      </div>
+      <h1 class="h1">Аккаунт</h1>
+      <img class="child" alt="" src="{% static 'name/img/global/ellipse-3212@2x.png' %}" />
+
+      <h3 class="h33">Кураж Пепсов</h3>
+      <div class="div18">Номер счета: 123456789</div>
+      <h3 class="e-mail-kurajgmailcom">e-mail: kuraj@gmail.com</h3>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,343 @@
+.vuesaxlinearmenu-icon {
+  position: relative;
+  width: 1.38rem;
+  height: 1.38rem;
+}
+.vuesaxlinearactivity-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.vuesaxlinearmenu-icon1 {
+  position: relative;
+  width: 1.38rem;
+  height: 1.38rem;
+  display: none;
+}
+.vuesaxlinearmenu {
+  border-radius: var(--br-xl);
+  background-color: var(--color4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs);
+  gap: var(--gap-3xs);
+}
+.div4 {
+  position: relative;
+  font-weight: 500;
+}
+.component-2 {
+  border-radius: var(--br-6xl);
+  background-color: var(--color2);
+  border: 3px solid var(--color3);
+  box-sizing: border-box;
+  height: 3.19rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-base) var(--padding-7xs)
+    var(--padding-9xs);
+  gap: var(--gap-5xs);
+  color: var(--color4);
+}
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0 0 var(--padding-xs);
+  gap: var(--gap-19xl);
+}
+.frame-child {
+  position: relative;
+  width: 1.47rem;
+  height: 0.95rem;
+}
+.group-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xs);
+  gap: var(--gap-base);
+}
+
+
+
+.vector-icon {
+  width: 2.13rem;
+  height: 2.13rem;
+}
+.vector-icon,
+.vestrum {
+  position: relative;
+}
+.vector-parent,
+.vestrum-wrapper {
+  width: 4.38rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.vector-parent {
+  width: 9.44rem;
+  justify-content: flex-start;
+  padding: 0 var(--padding-mini);
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  font-family: var(--font-libre-barcode-128-text);
+}
+.div8 {
+  position: relative;
+  font-size: var(--font-size);
+  font-weight: 500;
+  color: var(--color-black);
+}
+.vuesaxlinearsearch-normal {
+  border-radius: var(--br-3xl);
+  background-color: var(--color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.i {
+  position: relative;
+  font-weight: 300;
+}
+.div9 {
+  border-radius: var(--br-15xl);
+  background-color: var(--color-silver);
+  width: 16.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) 0 var(--padding-9xs) var(--padding-9xs);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+}
+.frame-item {
+  position: relative;
+  border-radius: 50%;
+  width: 3.13rem;
+  height: 3.13rem;
+  object-fit: cover;
+}
+.icons {
+  position: relative;
+  width: 0.88rem;
+  height: 0.88rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.ellipse-parent {
+  gap: var(--gap-xs);
+}
+.ellipse-parent,
+.frame-container,
+.frame-div,
+.frame-wrapper,
+.header,
+.parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frame-container,
+.frame-wrapper,
+.header,
+.parent {
+  align-items: flex-start;
+}
+.frame-wrapper,
+.header,
+.parent {
+  justify-content: flex-end;
+  padding: 0 var(--padding-mini);
+  font-size: var(--font-size-base);
+  color: var(--color4);
+}
+.header,
+.parent {
+  width: 32.5rem;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: var(--font-size-xs);
+  color: var(--color1);
+}
+
+.h1,
+.h3 {
+  margin: 0;
+  left: 2.13rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+.h1 {
+  position: absolute;
+  top: 1.44rem;
+  font-size: 3.13rem;
+}
+.h3 {
+  top: 5.25rem;
+  font-size: var(--font1-size);
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 6.56rem;
+}
+.child,
+.div11,
+.h3 {
+  position: absolute;
+}
+.child {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.div11 {
+  top: 4.44rem;
+  left: 70%;
+  width: 25rem;
+  height: 25rem;
+}
+.lorem-ipsum-dolor {
+  position: absolute;
+  top: 16.63rem;
+  left: 2.13rem;
+  font-weight: 500;
+  color: var(--color-black);
+  display: inline-block;
+  width: 60%;
+  height: auto;
+}
+.div12,
+.h11 {
+  position: absolute;
+}
+.h11 {
+  margin: 0;
+  top: 9.84%;
+  left: 0;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+.div12 {
+  top: 32.63rem;
+  left: 2.13rem;
+  width: 39.75rem;
+  height: 3.81rem;
+  font-size: var(--font-size-21xl);
+}
+.item {
+  position: relative;
+  border-top: 1px solid var(--color1);
+  box-sizing: border-box;
+  width: 70.19rem;
+  height: 0.06rem;
+}
+.div13,
+.frame-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.div13 {
+  width: 105%;
+  height: 2.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12.5rem;
+}
+.frame-section {
+  position: absolute;
+  width: 93%;
+  top: 37.5rem;
+  left: 2.13rem;
+  flex-direction: column;
+  gap: 1.38rem;
+  text-align: left;
+  font-size: var(--font-size);
+  color: var(--color4);
+  font-family: var(--font);
+}
+.div41,
+.div42 {
+  position: relative;
+  font-weight: 300;
+  display: inline-block;
+  width: 5.75rem;
+  height: 1.56rem;
+  flex-shrink: 0;
+}
+.div42 {
+  width: 3.69rem;
+}
+.parent1 {
+  position: absolute;
+  top: 13.44rem;
+  left: 2.13rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.63rem;
+  color: var(--color-black);
+}
+.container,
+.div {
+  overflow: hidden;
+  text-align: left;
+  font-family: var(--font);
+}
+.container {
+  position: absolute;
+  top: 4.56rem;
+  left: 16.25rem;
+  width: 83%;
+  height: 59.44rem;
+  font-size: var(--font-size);
+  color: var(--color4);
+}
+.div {
+  position: relative;
+  background-color: var(--color2);
+  width: 100%;
+  height: 64rem;
+  font-size: var(--font-size-base);
+  color: var(--color1);
+}
+
+a.navlink {
+  color: black; /* задаем цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+
+}

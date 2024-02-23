@@ -1,0 +1,22 @@
+.listWrapper {
+  background: black;
+  padding: 18px 28px 4px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.list {
+  overflow-x: scroll;
+  max-width: 100%;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.card {
+  min-width: 130px;
+}
+
+.content {
+  background: #d0cccc;
+}

@@ -1,0 +1,292 @@
+{%load static%}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'name/css/newsline/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/newsline/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/super_global.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Barcode 128 Text:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="div">
+      <div class="div1">
+        <div class="component-6">
+          <div class="group-parent">
+            <img
+              class="vuesaxlinearmenu-icon"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearmenu.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'dashboard' %}">Инструменты</a>
+          </div>
+          <div class="frame-parent">
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
+            </div>
+            <div class="component-2">
+              <div class="vuesaxlinearmenu">
+                <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/newsline/vuesaxlineartrade.svg' %}"
+                />
+
+                <img
+                  class="vuesaxlinearmenu-icon1"
+                  alt=""
+                  src="{% static 'name/img/newsline/vuesaxlineartrade.svg' %}"
+                />
+              </div>
+              <div class="div4">Лента</div>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearwallet2.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'wallet' %}">Кошелек</a>
+            </div>
+          </div>
+          <div class="group-parent">
+            <img
+              class="frame-child"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'catalogue' %}">Каталог</a>
+          </div>
+        </div>
+        <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}" />
+      </div>
+      <header class="header">
+        <div class="vector-parent">
+          <img class="vector-icon" alt="" src="{% static 'name/img/global/vector.svg' %}" />
+
+          <div class="vestrum-wrapper">
+            <h1 class="vestrum">vestrum</h1>
+          </div>
+        </div>
+        <div class="div8"><div>
+
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
+        <div class="parent">
+          <div class="div9">
+            <div class="vuesaxlinearsearch-normal">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearsearchnormal.svg' %}"
+              />
+            </div>
+            <i class="i">Введите поисковый запрос</i>
+          </div>
+          <div class="frame-wrapper">
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="ellipse-parent">
+                  <img
+                    class="frame-item"
+                    alt=""
+                    src="{% static 'name/img/global/ellipse-3212@2x.png' %}"
+                  />
+
+                  <div class="group">
+                    <div class="div2">Кураж</div>
+                    <img class="icons" alt="" src="{% static 'name/img/global/icons.svg' %}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <h1 class="h1">Лента новостей</h1>
+        <div class="div11">
+          <h1 class="h11">Актуальное</h1>
+        </div>
+        <section class="component-parent">
+          <div class="group-div">
+            <div class="div12">
+              <img class="child" alt="" src="{% static 'name/img/newsline/rectangle-41930@2x.png' %}" />
+
+              <div class="item"></div>
+              <div class="lorem-ipsum-dolor" style="font-size: 10px">
+                {{ 0.title }}
+              </div>
+              <button class="wrapper">
+                <div class="div13">{{ 0.author }}</div>
+              </button>
+              <div class="parent1">
+                <div class="div2">{{ 0.publishedAt }}</div>
+                <div class="div15">10 мин</div>
+              </div>
+            </div>
+
+            <div class="div16">
+              <img
+                class="child"
+                alt=""
+                src="{% static 'name/img/newsline/rectangle-419301@2x.png' %}"
+              />
+
+              <div class="item"></div>
+              <div class="lorem-ipsum-dolor1" style="font-size: 10px">
+                {{ 1.title }}}
+              </div>
+              <div class="frame">
+                <div class="div17">{{ 1.author }}</div>
+              </div>
+              <div class="parent2">
+                <div class="div2" >{{ 1.publishedAt }}</div>
+                <div class="div15">8 мин</div>
+              </div>
+            </div>
+            <div class="div20">
+              <img
+                class="child"
+                alt=""
+                src="{% static 'name/img/newsline/rectangle-419301@2x.png' %}"
+              />
+
+              <div class="item"></div>
+              <div class="lorem-ipsum-dolor1" style="font-size: 10px">
+                {{ 2.title }}}
+              </div>
+              <div class="frame">
+                <div class="div17">Калининград</div>
+              </div>
+              <div class="parent2">
+                <div class="div2">{{ 2.publishedAt }}</div>
+                <div class="div15">5 мин</div>
+              </div>
+            </div>
+            <div class="div24">
+              <img
+                class="child"
+                alt=""
+                src="{% static 'name/img/newsline/rectangle-419301@2x.png' %}"
+              />
+
+              <div class="item"></div>
+              <div class="lorem-ipsum-dolor1" style="font-size: 10px">
+                {{ 3.title }}}
+              </div>
+              <div class="frame">
+                <div class="div17">{{ 3.author }}</div>
+              </div>
+              <div class="parent2">
+                <div class="div2">{{ 3.publushedAt }}</div>
+                <div class="div15">2 мин</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="div28">
+            <div class="child4"></div>
+            <div class="child5"></div>
+          </div>
+        </section>
+        <div class="div29">
+          <h1 class="h11">Последнее</h1>
+        </div>
+        <div class="frame-section">
+          <div class="div30">
+            <a class="div4 navlink"  href="{% url 'news' %}" style="width: 800px">
+              {{ 4.title }}}
+            </a>
+            <div class="div2">{{ 4.author }}</div>
+
+          </div>
+          <div class="div30">
+            <div class="div4" style="width: 800px">
+                {{ 5.title }}}
+
+            </div>
+            <div class="div2">{{ 5.author }}</div>
+
+
+          </div>
+          <div class="div30">
+            <div class="div4" style="width: 800px">
+              {{ 6.title }}
+            </div>
+            <div class="div2">{{ 6.author }}</div>
+
+
+          </div>
+          <div class="div30">
+            <div class="div4" style="width: 800px">
+              {{ 7.title }}
+            </div>
+            <div class="div2">{{ 7.author }}</div>
+
+          </div>
+          <div class="div30"><a href={{ 9.url }} style="text-decoration: None; color: black">
+            <div class="div4" style="width: 600px">
+              {{ 8.title }}
+            </div>
+            <div class="div2">{{ 8.author }}</div>
+            </a>
+          </div>
+          <div class="div30"><a href={{ 9.url }} style="text-decoration: None; color: black">
+            <div class="div4">
+              {{ 9.title }}
+            </div>
+            <div class="div2">{{ 9.author }}
+            </div>
+          </a>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

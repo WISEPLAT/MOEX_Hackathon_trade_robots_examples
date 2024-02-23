@@ -1,0 +1,16 @@
+@keyframes scaleUpDown {
+	0% {
+		transform: translateY(0) scale(1);
+	}
+	50% {
+		transform: translateY(-5px) scale(1.05);
+	}
+	100% {
+		transform: translateY(-5px) scale(1.02);
+	}
+}
+
+.transition-width {
+	transition: width 0.5s ease-in-out;
+}
+

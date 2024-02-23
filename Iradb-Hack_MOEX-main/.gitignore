@@ -1,0 +1,16 @@
+# Virtiual environment
+/lenv
+/env
+*.py[cod]
+
+# python ignore
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__
+**/__pycache__/
+__pycache__/
+*.py[cod]
+
+*.idea/
+**.sh
+**nul

@@ -1,0 +1,9 @@
+.idea/
+.venv/
+.env
+models/*.bin
+.vscode/
+__pycache__/
+*.log
+
+catboost_info/

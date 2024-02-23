@@ -1,0 +1,299 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <link rel="stylesheet" href="{% static 'name/css/dashboard/graphic.css" />
+  <link rel="stylesheet" href="{% static 'name/css/dashboard/global.css' %}" />
+  <link rel="stylesheet" href="{% static 'name/css/dashboard/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'name/css/index.css' %}" />
+  <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+  />
+  <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Libre Barcode 128 Text:wght@400&display=swap"
+  />
+</head>
+<body>
+<main class="main">
+  <div class="div">
+    <div class="child"></div>
+    <div class="component-6">
+      <div class="component-1">
+        <div class="vuesaxlinearmenu">
+          <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/dashboard/vuesaxlinearmenu.svg' %}"
+          />
+        </div>
+        <div class="div1">Инструменты</div>
+      </div>
+      <div class="frame-parent">
+        <div class="vuesaxlinearactivity-parent">
+          <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
+          />
+
+          <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
+        </div>
+        <div class="vuesaxlinearactivity-parent">
+          <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/global/vuesaxlineartrade.svg' %}"
+          />
+
+          <a class="navlink" href="{% url 'newsline' %}">Лента</a>
+        </div>
+        <div class="vuesaxlinearactivity-parent">
+          <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
+          />
+
+          <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
+        </div>
+        <div class="vuesaxlinearactivity-parent">
+          <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/global/vuesaxlinearwallet2.svg' %}"
+          />
+
+          <a class="navlink" href="{% url 'wallet' %}">Кошелек</a>
+        </div>
+        <div class="vuesaxlinearactivity-parent">
+          <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
+          />
+
+          <a class="navlink" href="{% url 'catalogue' %}">Каталог</a>
+        </div>
+      </div>
+    </div>
+    <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}"/>
+  </div>
+  <header class="header" id="header_navbar">
+    <div class="vector-parent">
+      <img class="vector-icon" alt="" src="{% static 'name/img/global/vector.svg' %}" />
+
+      <div class="vestrum-wrapper">
+        <div class="vestrum">vestrum</div>
+      </div>
+    </div>
+    <div class="div6"><div>
+
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
+    <div class="parent">
+      <div class="div7">
+        <div class="vuesaxlinearsearch-normal">
+          <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/global/vuesaxlinearsearchnormal.svg' %}"
+          />
+        </div>
+        <i class="i">Введите поисковый запрос</i>
+      </div>
+      <div class="frame-wrapper">
+        <div class="frame-container">
+          <div class="frame-div">
+            <div class="ellipse-parent">
+              <img
+                      class="frame-child"
+                      alt=""
+                      src="{% static 'name/img/global/ellipse-3212@2x.png' %}"
+              />
+
+              <div class="group">
+                <div class="vestrum">Кураж</div>
+                <img class="icons" alt="" src="{% static 'name/img/global/icons.svg' %}" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="item"></section>
+  <h1 class="h1">Дашборд</h1>
+  <h2 class="h2">Рынок</h2>
+  <h2 class="h21">Подзаголовок</h2>
+  <div class="div9">
+    <div class="div1">Взлеты дня</div>
+  </div>
+  <div class="div11">
+    <div class="div1">Падения дня</div>
+  </div>
+  <button class="button">
+    <div class="div13">Индексы</div>
+  </button>
+  <div class="inner"></div>
+  <div class='marquee tnse' style='overflow:hidden; width: 80%'>
+    <p>USD/RUB<span class="variable">{{ DOLLAR_RUB }}</span></p>
+    <p>EUR/RUB<span class="variable">{{ EURO_RUB }}</span></p>
+    <p>GBP/RUB<span class="variable">{{  POUND_RUB }}</span></p>
+    <p>CHF/RUB<span class="variable">{{ SWISSFRANK_RUB }}</span></p>
+    <p>CNY/RUB<span class="variable">{{ CHINAUAN_RUB }}</span></p>
+    <p>JPY/RUB<span class="variable">{{ JAPANIENA_RUB }}</span></p>
+    <p>TRY/RUB<span class="variable">{{ LIRA_RUN }}</span></p>
+    <p>KZT/RUB<span class="variable">{{ TENGE_RUN }}</span></p>
+    <p>AMD/RUB<span class="variable">{{ LIPARIT_RUB }}</span></p>
+    <p>BYR/RUB<span class="variable">{{ BELRUB_RUB }}</span></p></div>
+<!--margin-right: 20px;float: left;display:flex;flex-direction: row; gap:2rem-->
+  <!--  <div class='marquee div14' style='overflow:hidden; width: 80%'></div>-->
+
+<!--  <div class="component-21">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+<!--  <div class="component-22">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+<!--  <div class="component-23">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+<!--  <div class="component-24">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+<!--  <div class="component-241">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+  <div class="rectangle-div"></div>
+  <div class="rectangle-section">
+     <figure class="highcharts-figure">
+        <div id="container"></div>
+<!--            <p class="highcharts-description">-->
+<!--            Добавляй хоть ща-->
+<!--            </p>-->
+       <script src="{% static 'name/js/graphic.js' %}"></script>
+    </figure>
+
+  </div>
+  <div class="rectangle-parent">
+    <div class="group-child"></div>
+    <div class="component-25">
+      <div class="group-parent">
+        <div class="container">
+          <div class="div24">Сбер</div>
+          <img
+                  class="group-item"
+                  alt=""
+                  src="{% static 'name/img/global/ellipse-3224@2x.png' %}"
+          />
+        </div>
+        <div class="group-div">
+          <div class="div25">10 000</div>
+          <div class="wrapper">
+            <div class="i">-0,0751</div>
+          </div>
+        </div>
+      </div>
+      <img class="component-25-child" alt="" src="{% static 'name/img/global/line-3.png' %}" />
+    </div>
+    <div class="component-26">
+      <div class="group-parent">
+        <div class="container">
+          <div class="div24">Сбер</div>
+          <img
+                  class="group-item"
+                  alt=""
+                  src="{% static 'name/img/global/ellipse-3224@2x.png' %}"
+          />
+        </div>
+        <div class="group-div">
+          <div class="div25">10 000</div>
+          <div class="wrapper">
+            <div class="i">-0,0751</div>
+          </div>
+        </div>
+      </div>
+      <img class="component-25-child" alt="" src="{% static 'name/img/global/line-3.svg' %}" />
+    </div>
+    <div class="component-27">
+      <div class="group-parent">
+        <div class="container">
+          <div class="div24">Сбер</div>
+          <img
+                  class="group-item"
+                  alt=""
+                  src="{% static 'name/img/global/ellipse-3224@2x.png' %}"
+          />
+        </div>
+        <div class="group-div">
+          <div class="div25">10 000</div>
+          <div class="wrapper">
+            <div class="i">-0,0751</div>
+          </div>
+        </div>
+      </div>
+      <img class="component-25-child" alt="" src="{% static 'name/img/global/line-3.svg' %}" />
+    </div>
+    <div class="component-28">
+      <div class="group-parent">
+        <div class="container">
+          <div class="div24">Сбер</div>
+          <img
+                  class="group-item"
+                  alt=""
+                  src="{% static 'name/img/global/ellipse-3224@2x.png' %}"
+          />
+        </div>
+        <div class="group-div">
+          <div class="div25">10 000</div>
+          <div class="wrapper">
+            <div class="i">-0,0751</div>
+          </div>
+        </div>
+      </div>
+      <img class="component-25-child" alt="" src="{% static 'name/img/global/line-3.svg' %}" />
+    </div>
+    <button class="button1">
+      <div class="div13">Смотреть все</div>
+    </button>
+  </div>
+<!--  <div class="div37">график</div>-->
+<!--  <div class="div38">статистика какая-то</div>-->
+</main>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
+    <script src="{% static 'name/js/running_str.js' %}"> </script>
+</html>

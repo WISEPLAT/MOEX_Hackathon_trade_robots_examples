@@ -1,0 +1,25 @@
+.wrapper {
+	display: grid;
+
+	width: 100%;
+	justify-items: center;
+	gap: 10px;
+
+	margin-bottom: 20px;
+}
+
+.blocks {
+	display: grid;
+
+	width: 98%;
+	height: fit-content;
+	grid-template-columns: 62% 1fr;
+	justify-items: center;
+	gap: 10px;
+}
+
+@media (max-width: 580px) {
+	.blocks {
+		grid-template-columns: auto;
+	}
+}

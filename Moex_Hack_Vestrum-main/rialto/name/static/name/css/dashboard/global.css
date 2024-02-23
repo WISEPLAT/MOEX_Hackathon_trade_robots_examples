@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+html {
+  font-size: 13px;
+}
+
+:root {
+  /* fonts */
+  --font: Montserrat;
+  --font-libre-barcode-128-text: "Libre Barcode 128 Text";
+
+  /* font sizes */
+  --font-size: 2.63rem;
+  --font2-size: 1.25rem;
+  --font1-size: 1.9rem;
+  --font-size-base: 1rem;
+  --font-size-xs: 0.75rem;
+  --font-size-6xl: 1.56rem;
+
+  /* Colors */
+  --color3: #fff;
+  --color: #000;
+  --color2: #5a5a5a;
+  --color4: #eb3426;
+  --color-tomato-100: rgba(235, 52, 38, 0.74);
+  --color5: #212325;
+  --bg-1: #1a1d1e;
+  --color1: #f3f4f6;
+  --color-limegreen: #2dc24e;
+  --color-silver-100: #b9b9b9;
+  --color-silver-200: #b8b6b6;
+
+  /* Gaps */
+  --gap-184xl: 12.69rem;
+  --gap-xs: 0.75rem;
+  --gap-5xs: 0.5rem;
+  --gap-3xs: 0.63rem;
+  --gap-7xl: 1.63rem;
+  --gap-19xl: 2.38rem;
+  --gap-base: 1rem;
+
+  /* Paddings */
+  --padding-3xs: 0.63rem;
+  --padding-mini: 0.94rem;
+  --padding-9xs: 0.25rem;
+  --padding-xs: 0.75rem;
+  --padding-8xs: 0.31rem;
+  --padding-base: 1rem;
+  --padding-7xs: 0.38rem;
+  --padding-5xs: 0.5rem;
+  --padding-6xl: 1.56rem;
+
+  /* Border radiuses */
+  --br-2xs: 11px;
+  --br-8xs: 5px;
+  --br-mini: 15px;
+  --br-15xl: 34px;
+  --br-3xl: 22px;
+  --br-6xl: 25px;
+  --br-xl: 20px;
+}

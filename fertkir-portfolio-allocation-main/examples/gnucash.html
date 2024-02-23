@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir='auto'>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@media (prefers-color-scheme: dark) {body {color: #000; background-color: #fff;}}
+h3 { font-family: "Arial", sans-serif; font-size: 15pt; font-weight: bold;  }
+a { font-family: "Arial", sans-serif; font-size: 10pt; font-style: italic;  }
+body, p, table, tr, td { vertical-align: top; font-family: "Arial", sans-serif; font-size: 10pt;  }
+tr.alternate-row { background: #ffffff }
+tr { page-break-inside: avoid !important;}
+html, body { height: 100vh; margin-top: 0px; margin-bottom: 0px; margin-left: 8px; margin-right: 8px; }
+td, th { border-color: grey }
+th.column-heading-left { text-align: left; font-family: "Arial", sans-serif; font-size: 10pt;  }
+th.column-heading-center { text-align: center; font-family: "Arial", sans-serif; font-size: 10pt;  }
+th.column-heading-right { text-align: right; font-family: "Arial", sans-serif; font-size: 10pt;  }
+td.highlight {background-color:#e1e1e1}td.neg { color: red;  }
+td.number-cell, td.total-number-cell { text-align: right; white-space: nowrap; }
+td.date-cell { white-space: nowrap; }
+td.anchor-cell { white-space: nowrap; font-family: "Arial", sans-serif; font-size: 10pt;  }
+td.number-cell { font-family: "Arial", sans-serif; font-size: 10pt;  }
+td.number-header { text-align: right; font-family: "Arial", sans-serif; font-size: 10pt;  }
+td.text-cell { font-family: "Arial", sans-serif; font-size: 10pt;  }
+td.total-number-cell { font-family: "Arial", sans-serif; font-size: 12pt; font-weight: bold;  }
+td.total-label-cell { font-family: "Arial", sans-serif; font-size: 12pt; font-weight: bold;  }
+td.centered-label-cell { text-align: center; font-family: "Arial", sans-serif; font-size: 12pt; font-weight: bold;  }
+sub { top: 0.4em; }
+sub, sup { vertical-align: baseline; position: relative; top: -0.4em; }
+@media print { html, body { height: unset; }}
+</style></head><body bgcolor="#ffffff"><script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+<h3 style='display:none'></h3><div style='width:100.0%;height:100.0%;'>
+<a id='jump-chart157' href='' style='display:none'></a>
+<canvas id="chart157"></canvas>
+</div>
+<script id='script-chart157'>
+var curriso = "RUB";
+var currsym = "₽";
+var formsty = "currency";
+var chartid = "chart157";
+var jumpid = 'jump-chart157';
+var loadstring = "Load";
+var chartjsoptions = {
+  "type" : "pie",
+  "data" : 
+  {
+    "labels" : [ "FXCN - ₽10,000.00 (12.5%)", "FXRL - ₽10,000.00 (12.5%)", "USD - ₽10,000.00 (12.5%)", "RUB - ₽10,000.00 (12.5%)", "CNY - ₽10,000.00 (12.5%)", "FXWO - ₽10,000.00 (12.5%)", "FXGD - ₽10,000.00 (12.5%)", "TMOS - ₽10,000.00 (12.5%)"],
+    "datasets" : [ 
+      {
+        "urls" : false,
+        "data" : [ 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000],
+        "label" : "Accounts",
+        "backgroundColor" : [ "#FF4136", "#FF851B", "#FFDC00", "#2ECC40", "#0074D9", "#001f3f", "#85144b", "#7FDBFF"],
+        "borderColor" : [ "#FF4136", "#FF851B", "#FFDC00", "#2ECC40", "#0074D9", "#001f3f", "#85144b", "#7FDBFF"]
+      }]
+  },
+  "options" : 
+  {
+    "maintainAspectRatio" : false,
+    "animation" : 
+    {
+      "duration" : 0
+    },
+    "chartArea" : 
+    {
+      "backgroundColor" : "#fffdf6"
+    },
+    "legend" : 
+    {
+      "position" : "right",
+      "reverse" : false,
+      "labels" : 
+      {
+        "fontColor" : "black"
+      }
+    },
+    "elements" : 
+    {
+      "line" : 
+      {
+        "tension" : 0
+      },
+      "point" : 
+      {
+        "pointStyle" : false
+      }
+    },
+    "tooltips" : 
+    {
+      "callbacks" : 
+      {
+        "label" : false
+      }
+    },
+    "scales" : 
+    {
+      "xAxes" : [ 
+        {
+          "display" : false,
+          "type" : "category",
+          "distribution" : "series",
+          "offset" : true,
+          "gridLines" : 
+          {
+            "display" : true,
+            "lineWidth" : 1.5
+          },
+          "scaleLabel" : 
+          {
+            "display" : true,
+            "labelString" : ""
+          },
+          "ticks" : 
+          {
+            "maxRotation" : 30
+          }
+        }, 
+        {
+          "position" : "top",
+          "ticks" : 
+          {
+            "display" : false
+          },
+          "gridLines" : 
+          {
+            "display" : false,
+            "drawTicks" : false
+          }
+        }],
+      "yAxes" : [ 
+        {
+          "stacked" : false,
+          "display" : false,
+          "gridLines" : 
+          {
+            "display" : true,
+            "lineWidth" : 1.5
+          },
+          "scaleLabel" : 
+          {
+            "display" : 1.5,
+            "labelString" : ""
+          },
+          "ticks" : 
+          {
+            "beginAtZero" : false
+          }
+        }, 
+        {
+          "position" : "right",
+          "ticks" : 
+          {
+            "display" : false
+          },
+          "gridLines" : 
+          {
+            "display" : false,
+            "drawTicks" : false
+          }
+        }]
+    },
+    "title" : 
+    {
+      "display" : true,
+      "fontStyle" : "",
+      "text" : [ "Securities", "Balance at 11/29/2022: ₽80,000.00"]
+    }
+  }
+};
+
+
+// The following snippet from MDN
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+var toLocaleStringSupportsOptions = (typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function');
+
+// format a number e.g. 2.5 into monetary e.g. "$2.50" or other style formsty
+function numformat(amount) {
+  if (toLocaleStringSupportsOptions) {
+      return amount.toLocaleString(undefined, {style:formsty, currency:curriso});
+  } else if (formsty == 'percent') {
+      return (100 * amount).toLocaleString() + '%';
+  } else if (formsty == 'currency') {
+      return currsym + amount.toLocaleString();
+  } else {
+      return amount.toLocaleString();
+  }
+}
+chartjsoptions.options.scales.yAxes[0].ticks.callback = yAxisDisplay;
+function yAxisDisplay(value,index,values) { return numformat(value); };
+chartjsoptions.options.scales.xAxes[0].ticks.callback = xAxisDisplay;
+function xAxisDisplay(value,index,values) { return chartjsoptions.data.labels[index]; };
+chartjsoptions.options.tooltips.callbacks.label = tooltipLabel;
+chartjsoptions.options.tooltips.callbacks.title = tooltipTitle;
+
+function tooltipLabel(tooltipItem,data) {
+  var datasetLabel = data.datasets[tooltipItem.datasetIndex].label || 'Other';
+  var label = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+  switch (typeof(label)) {
+    case 'number':
+      return datasetLabel + ': ' + numformat(label);
+    default:
+      return '';
+  }
+}
+
+function tooltipTitle(array,data) {
+  return data.labels[array[0].index]; }
+
+// draw the background color
+Chart.pluginService.register({
+  beforeDraw: function (chart, easing) {
+    if (chart.config.options.chartArea && chart.config.options.chartArea.backgroundColor) {
+      var ctx = chart.chart.ctx;
+      var chartArea = chart.chartArea;
+      ctx.save();
+      ctx.fillStyle = chart.config.options.chartArea.backgroundColor;
+      ctx.fillRect(chartArea.left, chartArea.top, chartArea.right - chartArea.left, chartArea.bottom - chartArea.top);
+      ctx.restore();
+    }
+  }
+})
+
+// copy font info from css into chartjs.
+bodyStyle = window.getComputedStyle (document.querySelector ('body'));
+Chart.defaults.global.defaultFontSize = parseInt (bodyStyle.fontSize);
+Chart.defaults.global.defaultFontFamily = bodyStyle.fontFamily;
+Chart.defaults.global.defaultFontStyle = bodyStyle.fontStyle;
+
+titleStyle = window.getComputedStyle (document.querySelector ('h3'));
+chartjsoptions.options.title.fontSize = parseInt (titleStyle.fontSize);
+chartjsoptions.options.title.fontFamily = titleStyle.fontFamily;
+chartjsoptions.options.title.fontStyle = titleStyle.fontStyle;
+
+document.getElementById(chartid).onclick = function(evt) {
+  var activepoints = myChart.getElementAtEvent(evt);
+  var anchor = document.getElementById(jumpid);
+  switch (activepoints.length)  {
+    case 0:
+      anchor.href = '';
+      anchor.textContent = '';
+      anchor.style = 'display: none';
+      break;
+    default:
+      var index = activepoints[0]['_index'];
+      var datasetIndex = activepoints[0]['_datasetIndex'];
+      var datasetURLs = myChart.data.datasets[datasetIndex].urls;
+      // console.log('index=',index,'datasetIndex=',datasetIndex);
+      anchor.style = 'position:absolute; top:' + (evt.clientY - 30) + 'px; left:' + (evt.clientX - 20) + 'px; display: block; padding: 5px; border-radius: 5px; background: #4E9CAF; text-align:center; color:white; z-index: 999;';
+      switch (typeof(datasetURLs)) {
+        case 'string':
+          anchor.href = datasetURLs;
+          anchor.textContent = loadstring;
+          break;
+        case 'object':
+          anchor.href = datasetURLs[index];
+          anchor.textContent = loadstring;
+          break;
+        default:
+          anchor.href = '';
+          anchor.textContent = '';
+          anchor.style = 'display: none';
+      }
+  }
+}
+
+var myChart = new Chart(chartid, chartjsoptions);
+</script></body>
+</html>
+

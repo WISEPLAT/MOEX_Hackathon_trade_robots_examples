@@ -1,0 +1,48 @@
+services:
+  db:
+    image: postgres:13.3
+    environment:
+      - POSTGRES_DB=algopack
+      - POSTGRES_USER=algopack
+      - POSTGRES_PASSWORD=algopack
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - .:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+    networks:
+      - deploy_network
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    networks:
+      - deploy_network
+
+  app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 5981:5981
+    depends_on:
+      - api
+    networks:
+      - deploy_network
+
+
+volumes:
+  pgdata:
+
+networks:
+  deploy_network:
+    driver: bridge

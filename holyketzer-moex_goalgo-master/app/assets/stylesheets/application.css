@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.btn-navbar {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.btn-profile {
+  cursor: default !important;
+}
+
+.btn-vmargin {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form-check.form-check-inline {
+  margin-left: 30px;
+}
+
+.input-group-text {
+  min-width: 250px;
+}
+
+.filter-spoiler {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.text-predanger {
+  color: #fd7e14;;
+}
+
+.progress {
+  min-height: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.index-date {
+  min-width: 120px;
+}

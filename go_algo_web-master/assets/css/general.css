@@ -1,0 +1,32 @@
+button {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  width: -webkit-fill-available;
+  opacity: 0.8;
+  background: #000;
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 1;
+}
+button:hover:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.general-link {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.general-link:hover {
+  opacity: 1;
+  color: red;
+  text-decoration: underline;
+}
+
+*:disabled {
+  opacity: 0.4;
+}
+
+/*# sourceMappingURL=general.css.map */

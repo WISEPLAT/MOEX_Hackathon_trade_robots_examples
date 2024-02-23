@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+<body>
+    <script>
+            $(document).ready(function(){
+                //Скрыть PopUp при загрузке страницы
+                PopUpHide();
+            });
+            //Функция отображения PopUp
+            function PopUpShow(){
+                $("#popup1").show();
+            }
+            //Функция скрытия PopUp
+            function PopUpHide(){
+                $("#popup1").hide();
+            }
+        </script>
+    </head>
+    <div class="b-container">
+    Это ПОПАП
+    <a href="javascript:PopUpShow()">ПОКАЗАТЬ ПОПАП</a>
+        </div>
+        <div class="b-popup" id="popup1">
+            <div class="b-popup-content">
+                Text in Popup
+            <a href="javascript:PopUpHide()">СКРЫТЬ ПОПАП</a>
+            </div>
+        </div>
+</body>
+</html>

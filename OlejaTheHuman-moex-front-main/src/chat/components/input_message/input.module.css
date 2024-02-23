@@ -1,0 +1,40 @@
+.wrapper{
+    width: 100%;
+    padding: 16px 27px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.input_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    width: 100%;
+    padding: 17px 20px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: #F6F6F6;
+    font-size: var(--middle-size);
+    resize: none;
+    overflow: hidden;
+    font-family: Arial, serif;
+}
+
+.input::placeholder{
+    font-size: var(--middle-size);
+}
+
+.input:focus{
+    box-shadow: 0 0 0 1px #EF3124
+}

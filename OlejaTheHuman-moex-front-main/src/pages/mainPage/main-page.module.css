@@ -1,0 +1,44 @@
+.wrapper {
+    max-width: var(--wrapper-width);
+    width: 100%;
+    padding: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.uploadedData {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.algosList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.skeleton {
+    width: 100%;
+    height: 35px;
+}
+
+.fileUploadItem:hover {
+    cursor: pointer;
+    background-color: rgba(60, 60, 67, 0.10);
+}

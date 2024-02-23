@@ -1,0 +1,2 @@
+class ShareSector < ApplicationRecord
+end

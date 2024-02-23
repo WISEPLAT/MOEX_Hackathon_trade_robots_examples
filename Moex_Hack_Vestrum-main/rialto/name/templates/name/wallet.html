@@ -1,0 +1,525 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'name/css/wallet/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/wallet/index.css' %}" />
+<!--    <link rel="stylesheet" href="{% static 'name/css/super_global.css' %}" />-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Barcode 128 Text:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="div">
+      <div class="div1">
+        <div class="component-6">
+          <div class="group-parent">
+            <img
+              class="vuesaxlinearmenu-icon"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearmenu.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'dashboard' %}">Инструменты</a>
+          </div>
+          <div class="frame-parent">
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlineartrade.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'newsline' %}">Лента</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
+            </div>
+            <div class="component-4">
+              <div class="vuesaxlinearmenu">
+                <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/wallet/vuesaxlinearwallet2.svg' %}"
+                />
+
+                <img
+                  class="vuesaxlinearmenu-icon1"
+                  alt=""
+                  src="{% static 'name/img/wallet/vuesaxlinearwallet2.svg' %}"
+                />
+              </div>
+              <div class="div6">Кошелек</div>
+            </div>
+          </div>
+          <div class="group-parent">
+            <img
+              class="frame-child"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'catalogue' %}">Каталог</a>
+          </div>
+        </div>
+        <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}" />
+      </div>
+      <header class="header">
+        <div class="vector-parent">
+          <img class="vector-icon" alt="" src="{% static 'name/img/global/vector.svg' %}" />
+
+          <div class="vestrum-wrapper">
+            <div class="vestrum">vestrum</div>
+          </div>
+        </div>
+        <div class="div8"><div>
+
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
+        <div class="parent">
+          <div class="div9">
+            <div class="vuesaxlinearsearch-normal">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearsearchnormal.svg' %}"
+              />
+            </div>
+            <i class="i">Введите поисковый запрос</i>
+          </div>
+          <div class="frame-wrapper">
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="ellipse-parent">
+                  <img
+                    class="frame-item"
+                    alt=""
+                    src="{% static 'name/img/global/ellipse-3212@2x.png' %}"
+                  />
+
+                  <div class="group">
+                    <div class="vestrum">Кураж</div>
+                    <img class="icons" alt="" src="{% static 'name/img/global/icons.svg' %}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <h3 class="h3">Баланс счёта <br>100&nbsp000&nbsp000 ₽ </h3>
+
+        <div class="parent1">
+
+          <button class="button">
+            <div class="div11">Ввод</div>
+          </button>
+          <button class="button">
+            <div class="div11">Вывод</div>
+          </button>
+          <button class="button">
+            <div class="div11">Перевод</div>
+          </button>
+        </div>
+        <h1 class="h1">Кошелёк</h1>
+
+        <section class="frame-inner"></section>
+        <section class="rectangle-section"></section>
+        <div class="parent2">
+          <div class="div14">Компания</div>
+          <div class="div15">Сумма</div>
+          <div class="div16">Стоимость/шт.</div>
+          <div class="frame-child1"></div>
+        </div>
+        <div class="parent3">
+          <div class="div17">Номер транзакции</div>
+          <div class="div18">Дата</div>
+          <div class="div19">Время</div>
+          <div class="div20">Статус</div>
+          <div class="div21">Итоговая сумма</div>
+          <div class="wrapper">
+            <div class="div22">Компания</div>
+          </div>
+        </div>
+        <div class="group1">
+          <div class="group-inner">
+            <div class="parent4">
+              <h3 class="h31">Активы</h3>
+              <div class="div23">
+                <div class="div24">Фильтр</div>
+                <img class="vector-icon1" alt="" src="{% static 'name/img/wallet/vector1.svg' %}" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group2">
+          <div class="group-child">
+            <div class="group-child">
+              <h3 class="h31">Последние транзакции</h3>
+              <div class="div25">
+                <div class="div24">Фильтр</div>
+                <img class="vector-icon1" alt="" src="{% static 'name/img/wallet/vector1.svg' %}" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="frame-section">
+          <div class="div27">
+            <div class="ellipse-group">
+              <img
+                class="group-item"
+                alt=""
+                src="{% static 'name/img/wallet//ellipse-3224@2x.png' %}"
+              />
+
+              <div class="div28">Сбер</div>
+            </div>
+            <div class="div29">1 000 000 $</div>
+            <div class="group-container">
+              <div class="frame">
+                <div class="div30">10 000 $</div>
+              </div>
+              <img class="polygon-icon" alt="" src="{% static 'name/img/wallet/polygon-14.svg' %}" />
+            </div>
+            <div class="div31">Перейти →</div>
+          </div>
+          <div class="div27">
+            <div class="ellipse-group">
+              <img
+                class="group-item"
+                alt=""
+                src="{% static 'name/img/wallet/ellipse-32241@2x.png' %}"
+              />
+
+              <div class="div28">Ozon</div>
+            </div>
+            <div class="div29">1 000 000 $</div>
+            <div class="group-container">
+              <div class="frame">
+                <div class="div30">10 000 $</div>
+              </div>
+              <img class="polygon-icon" alt="" src="{% static 'name/img/wallet//polygon-14.svg' %}" />
+            </div>
+            <div class="div31">Перейти →</div>
+          </div>
+          <div class="div27">
+            <div class="ellipse-group">
+              <img
+                class="group-item"
+                alt=""
+                src="{% static 'name/img/wallet//ellipse-32242@2x.png' %}"
+              />
+
+              <div class="div28">Роснефть</div>
+            </div>
+            <div class="div29">1 000 000 $</div>
+            <div class="group-container">
+              <div class="frame">
+                <div class="div30">10 000 $</div>
+              </div>
+              <img class="polygon-icon" alt="" src="{% static 'name/img/wallet//polygon-14.svg' %}" />
+            </div>
+            <div class="div31">Перейти →</div>
+          </div>
+          <div class="div27">
+            <div class="ellipse-group">
+              <img
+                class="group-item"
+                alt=""
+                src="{% static 'name/img/wallet/ellipse-32243@2x.png' %}"
+              />
+
+              <div class="div28">Альфа банк</div>
+            </div>
+            <div class="div29">1 000 000 $</div>
+            <div class="group-container">
+              <div class="frame">
+                <div class="div30">10 000 $</div>
+              </div>
+              <img class="polygon-icon" alt="" src="{% static 'name/img/wallet//polygon-14.svg' %}" />
+            </div>
+            <div class="div31">Перейти →</div>
+          </div>
+          <div class="div27">
+            <div class="ellipse-group">
+              <img
+                class="group-item"
+                alt=""
+                src="{% static 'name/img/wallet/ellipse-32244@2x.png' %}"
+              />
+
+              <div class="div28">Яндекс</div>
+            </div>
+            <div class="div29">1 000 000 $</div>
+            <div class="group-container">
+              <div class="frame">
+                <div class="div30">10 000 $</div>
+              </div>
+              <img class="polygon-icon" alt="" src="{% static 'name/img/wallet/polygon-14.svg' %}" />
+            </div>
+            <div class="div31">Перейти →</div>
+          </div>
+        </section>
+        <div class="vector-group">
+          <img class="arrow-icon" alt="" src="{% static 'name/img/wallet/arrow-1.svg' %}" />
+
+          <div class="div48">посмотреть все</div>
+        </div>
+        <div class="vector-container">
+          <img class="arrow-icon" alt="" src="{% static 'name/img/wallet/arrow-1.svg' %}" />
+
+          <div class="div48">посмотреть все</div>
+        </div>
+        <div class="component-15">
+          <div class="ellipse-parent4">
+            <img
+              class="group-child9"
+              alt=""
+              src="{% static 'name/img/wallet/ellipse-32245@2x.png' %}"
+            />
+
+            <div class="div50">Сбер</div>
+          </div>
+          <div class="div51">1234567890</div>
+          <div class="div52">31.12.23</div>
+          <div class="div53">23:59</div>
+          <div class="component-15-inner">
+            <div class="wrapper5">
+              <div class="div54">10 000 ₽</div>
+            </div>
+          </div>
+          <div class="div55">В обработке</div>
+          <div class="component-11">
+            <div class="div56">1 000 000 000</div>
+            <div class="div57">₽</div>
+            <img
+              class="component-11-child"
+              alt=""
+              src="./public/vuesaxlinearmenu1.svg"
+            />
+          </div>
+          <div class="component-15-child"></div>
+        </div>
+        <div class="component-16">
+          <div class="ellipse-parent4">
+            <img
+              class="group-child9"
+              alt=""
+              src="{% static 'name/img/wallet/ellipse-32245@2x.png' %}"
+            />
+
+            <div class="div50">Сбер</div>
+          </div>
+          <div class="div51">1234567890</div>
+          <div class="div52">31.12.23</div>
+          <div class="div53">23:59</div>
+          <div class="component-15-inner">
+            <div class="wrapper5">
+              <div class="div54">10 000 ₽</div>
+            </div>
+          </div>
+          <div class="div55">Успешно</div>
+          <div class="component-11">
+            <div class="div56">1 000 000 000</div>
+            <div class="div57">₽</div>
+            <img
+              class="component-11-child"
+              alt=""
+              src="./public/vuesaxlinearmenu1.svg"
+            />
+          </div>
+          <div class="component-16-child"></div>
+        </div>
+        <div class="component-17">
+          <div class="ellipse-parent4">
+            <img
+              class="group-child9"
+              alt=""
+              src="{% static 'name/img/wallet/ellipse-32245@2x.png' %}"
+            />
+
+            <div class="div50">Сбер</div>
+          </div>
+          <div class="div51">1234567890</div>
+          <div class="div52">31.12.23</div>
+          <div class="div53">23:59</div>
+          <div class="component-15-inner">
+            <div class="wrapper5">
+              <div class="div54">10 000 ₽</div>
+            </div>
+          </div>
+          <div class="div55">В обработке</div>
+          <div class="component-11">
+            <div class="div56">1 000 000 000</div>
+            <div class="div57">₽</div>
+            <img
+              class="component-11-child"
+              alt=""
+              src="./public/vuesaxlinearmenu1.svg"
+            />
+          </div>
+          <div class="component-15-child"></div>
+        </div>
+        <div class="component-18">
+          <div class="ellipse-parent4">
+            <img
+              class="group-child9"
+              alt=""
+              src="{% static 'name/img/wallet/ellipse-32245@2x.png' %}"
+            />
+
+            <div class="div50">Сбер</div>
+          </div>
+          <div class="div51">1234567890</div>
+          <div class="div52">31.12.23</div>
+          <div class="div53">23:59</div>
+          <div class="component-15-inner">
+            <div class="wrapper5">
+              <div class="div54">10 000 ₽</div>
+            </div>
+          </div>
+          <div class="div55">Отклонен</div>
+          <div class="component-11">
+            <div class="div56">1 000 000 000</div>
+            <div class="div57">₽</div>
+            <img
+              class="component-11-child"
+              alt=""
+              src="./public/vuesaxlinearmenu1.svg"
+            />
+          </div>
+          <div class="component-18-child"></div>
+        </div>
+        <div class="component-19">
+          <div class="ellipse-parent4">
+            <img
+              class="group-child9"
+              alt=""
+              src="{% static 'name/img/wallet/ellipse-32245@2x.png' %}"
+            />
+
+            <div class="div50">Сбер</div>
+          </div>
+          <div class="div51">1234567890</div>
+          <div class="div52">31.12.23</div>
+          <div class="div53">23:59</div>
+          <div class="component-15-inner">
+            <div class="wrapper5">
+              <div class="div54">10 000 ₽</div>
+            </div>
+          </div>
+          <div class="div55">В обработке</div>
+          <div class="component-11">
+            <div class="div56">1 000 000 000</div>
+            <div class="div57">₽</div>
+            <img
+              class="component-11-child"
+              alt=""
+              src="./public/vuesaxlinearmenu1.svg"
+            />
+          </div>
+          <div class="component-15-child"></div>
+        </div>
+        <div class="component-20">
+          <div class="ellipse-parent4">
+            <img
+              class="group-child9"
+              alt=""
+              src="{% static 'name/img/wallet/ellipse-32245@2x.png' %}"
+            />
+
+            <div class="div50">Сбер</div>
+          </div>
+          <div class="div51">1234567890</div>
+          <div class="div52">31.12.23</div>
+          <div class="div53">23:59</div>
+          <div class="component-15-inner">
+            <div class="wrapper5">
+              <div class="div54">10 000 ₽</div>
+            </div>
+          </div>
+          <div class="div55">В обработке</div>
+          <div class="component-11">
+            <div class="div56">1 000 000 000</div>
+            <div class="div57">₽</div>
+            <img
+              class="component-11-child"
+              alt=""
+              src="./public/vuesaxlinearmenu1.svg"
+            />
+          </div>
+          <div class="component-15-child"></div>
+        </div>
+        <div class="rectangle-parent">
+          <div class="rectangle-div"></div>
+          <div class="group-child15"></div>
+          <div class="group-child16"></div>
+          <div class="group-child17"></div>
+          <div class="group-child18"></div>
+          <img class="group-child19" alt="" src="{% static 'name/img/wallet//vector-894.svg' %}" />
+
+          <img class="group-child20" alt="" src="{% static 'name/img/wallet//vector-895.svg' %}" />
+
+          <img class="group-child21" alt="" src="{% static 'name/img/wallet//vector-896.svg' %}" />
+
+          <img class="group-child22" alt="" src="{% static 'name/img/wallet//vector-897.svg' %}" />
+
+          <img class="group-child23" alt="" src="{% static 'name/img/wallet//vector-898.svg' %}" />
+
+          <div class="ellipse-div"></div>
+          <div class="group-child24"></div>
+          <div class="group-child25"></div>
+          <div class="group-child26"></div>
+          <div class="group-child27"></div>
+          <div class="div98">Сбер</div>
+          <div class="ozon">Ozon</div>
+          <div class="div99">Роснефть</div>
+          <div class="div100">Альфа банк</div>
+          <div class="div101">Яндекс</div>
+          <div class="div102">20%</div>
+          <div class="div103">20%</div>
+          <div class="div104">20%</div>
+          <div class="div105">20%</div>
+          <div class="div106">20%</div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

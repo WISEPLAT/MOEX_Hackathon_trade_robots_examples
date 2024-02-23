@@ -1,0 +1,63 @@
+Расчёт доходности нейронных сетей
+python calc_profit.py \ 
+	--cmd_config \
+	--task_id 123
+	--scaler_path app/scalers/1D \
+	--neural_path app/neurals/1D \
+	--ticker SBER \
+	--timeframe 1D \
+	--start_date 2007-01-01 \
+	--end_date 2023-11-26 \
+	--count_points 6 \
+	--extr_bar_count 10 \
+	--max_unmark 0.33
+
+Расчёт сигналов
+python calc_signals.py  \
+	--cmd_config \
+	--task_id 123 \
+	--tickers ["SBER", "ABIO"] \
+	--scaler_path app/scalers/1D \
+	--neural_path app/neurals/1D \
+	--timeframe 1D \
+	--count_points 6 \
+	--extr_bar_count 10 \
+	--max_unmark 0.33 \
+	--count_days 360
+
+Генерация датасетов
+python data_gen.py \
+	--cmd_config \
+	--task_id 123 \
+	--timeframe 1D \
+	--start_date 2007-01-01 \
+	--end_date 2023-11-26 \
+	--count_points 6 \
+	--extr_bar_count 10 \
+	--size_df 2 \
+	--max_unmark 0.33 \
+	--data_path app/data/1D
+
+Разметка данных
+python data_markup.py \
+	--cmd_config \
+	--task_id 123 \
+	--ticker SBER \
+	--timeframe 1D \
+	--start_date 2007-01-01 \
+	--end_date 2023-11-26 \
+	--count_points 6 \
+	--extr_bar_count 10
+
+Обучение нейронных сетей
+python edu_neural.py \
+	--cmd_config \
+	--task_id 123 \
+	--data_path app/data/1D \
+	--scaler_path app/scalers/1D \
+	--neural_path app/neurals/1D \
+	--new_model_flag True \
+	--learning_rate 0.00001 \
+	--epochs 10 \
+	--steps_per_epoch 128 \
+	--validation_steps 128

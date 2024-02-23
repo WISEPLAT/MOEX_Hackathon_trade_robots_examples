@@ -1,0 +1,20 @@
+<clickhouse>
+    <zookeeper>
+        <node>
+            <host>clickhouse-node01</host>
+            <port from_env="CH_KEEPER_TCP_PORT"/>
+        </node>
+        <node>
+            <host>clickhouse-node03</host>
+            <port from_env="CH_KEEPER_TCP_PORT"/>
+        </node>
+        <node>
+            <host>clickhouse-node05</host>
+            <port from_env="CH_KEEPER_TCP_PORT"/>
+        </node>
+        <node>
+            <host>clickhouse-keeper-quorum</host>
+            <port from_env="CH_KEEPER_TCP_PORT"/>
+        </node>
+    </zookeeper>
+</clickhouse>

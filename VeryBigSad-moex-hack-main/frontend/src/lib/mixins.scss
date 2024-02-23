@@ -1,0 +1,13 @@
+@mixin block {
+    padding: 32px 40px;
+    background-color: var(--block-background);
+    @include rounded();
+}
+
+@mixin border {
+    border: 1px solid var(--text);
+}
+
+@mixin rounded {
+    border-radius: 12px;
+}

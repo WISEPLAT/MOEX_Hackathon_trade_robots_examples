@@ -1,0 +1,34 @@
+.blockLanguages {
+	display: grid;
+	gap: 10px;
+}
+
+.langLink {
+	margin: 20px 30px !important;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.lang {
+	margin-right: 30px !important;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.lang:active,
+.langLink:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--primary);
+}
+
+@media (min-width: 1024px) {
+	.lang:hover,
+	.langLink:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--primary);
+	}
+}

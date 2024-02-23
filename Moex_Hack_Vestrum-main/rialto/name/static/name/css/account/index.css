@@ -1,0 +1,431 @@
+.vuesaxlinearmenu-icon {
+  position: relative;
+  width: 1.38rem;
+  height: 1.38rem;
+}
+.vuesaxlinearactivity-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.vuesaxlinearmenu-icon1 {
+  position: relative;
+  width: 1.38rem;
+  height: 1.38rem;
+  display: none;
+}
+.vuesaxlinearmenu {
+  border-radius: var(--br-xl);
+  background-color: var(--color4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs);
+  gap: var(--gap-3xs);
+}
+.div5 {
+  position: relative;
+  font-weight: 500;
+}
+.component-31 {
+  border-radius: var(--br-6xl);
+  background-color: var(--color2);
+  border: 3px solid var(--color3);
+  box-sizing: border-box;
+  height: 3.19rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-base) var(--padding-7xs)
+    var(--padding-9xs);
+  gap: var(--gap-5xs);
+  color: var(--color4);
+}
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0 0 var(--padding-xs);
+  gap: var(--gap-19xl);
+}
+.frame-child {
+  position: relative;
+  width: 1.47rem;
+  height: 0.95rem;
+}
+.group-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xs);
+  gap: var(--gap-base);
+}
+
+.vector-icon {
+  width: 2.13rem;
+  height: 2.13rem;
+}
+.vector-icon,
+.vestrum {
+  position: relative;
+}
+.vector-parent,
+.vestrum-wrapper {
+  width: 4.38rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.vector-parent {
+  width: 9.44rem;
+  justify-content: flex-start;
+  padding: 0 var(--padding-mini);
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  font-family: var(--font-libre-barcode-128-text);
+}
+.div8 {
+  position: relative;
+  font-size: var(--font2-size);
+  font-weight: 500;
+  color: var(--color-black);
+}
+.vuesaxlinearsearch-normal {
+  border-radius: var(--br-3xl);
+  background-color: var(--color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.i {
+  position: relative;
+  font-weight: 300;
+}
+.div9 {
+  border-radius: var(--br-15xl);
+  background-color: var(--color-silver);
+  width: 16.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) 0 var(--padding-9xs) var(--padding-9xs);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+}
+.frame-item {
+  position: relative;
+  border-radius: 50%;
+  width: 3.13rem;
+  height: 3.13rem;
+  object-fit: cover;
+}
+.icons {
+  position: relative;
+  width: 0.88rem;
+  height: 0.88rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.ellipse-parent {
+  gap: var(--gap-xs);
+}
+.ellipse-parent,
+.frame-container,
+.frame-div,
+.frame-wrapper,
+.header,
+.parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frame-container,
+.frame-wrapper,
+.header,
+.parent {
+  align-items: flex-start;
+}
+.frame-wrapper,
+.header,
+.parent {
+  justify-content: flex-end;
+  padding: 0 var(--padding-mini);
+  font-size: var(--font-size-base);
+  color: var(--color4);
+}
+.header,
+.parent {
+  width: 32.5rem;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: var(--font-size-xs);
+  color: var(--color1);
+}
+
+.trade-icon {
+  position: relative;
+  width: 3.25rem;
+  height: 3.25rem;
+  left: 3rem;
+}
+.h3,
+.lorem-ipsum-dolor {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.h3 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  width: 20.56rem;
+  height: 2.25rem;
+}
+.lorem-ipsum-dolor {
+  font-size: var(--font2-size);
+  font-weight: 500;
+  width: 41.06rem;
+  height: 2.94rem;
+}
+.container {
+
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+.instance-child {
+  position: relative;
+  border-radius: 50%;
+  width: 4.06rem;
+  height: 4.06rem;
+  object-fit: cover;
+}
+.div11 {
+  position: relative;
+  font-size: var(--font2-size);
+  font-weight: 500;
+  font-family: var(--font);
+  color: var(--color2);
+  text-align: left;
+}
+.button,
+.trade-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-3xs) var(--padding-6xl);
+  background-color: var(--color4);
+  border-radius: var(--br-2xs);
+}
+.trade-parent {
+  position: absolute;
+  width: 80%;
+  top: 24rem;
+  left: 18.25rem;
+  border-radius: var(--br-mini);
+  background-color: var(--color);
+  padding: var(--padding-8xl) var(--padding-5xl);
+  gap: 6rem;
+}
+.trade-icon1 {
+  position: absolute;
+  height: 42%;
+  width: 3.32%;
+  top: 37.5%;
+  right: 94.46%;
+  bottom: 37.5%;
+  left: 5rem;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.h31 {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  width: 20.56rem;
+  height: 2.25rem;
+}
+.div12,
+.parent1 {
+  position: absolute;
+  width: 41.06rem;
+}
+.div12 {
+  top: 2.69rem;
+  left: 5rem;
+  font-size: var(--font2-size);
+  font-weight: 500;
+  display: inline-block;
+  height: 2.94rem;
+}
+.parent1 {
+  top: 1.69rem;
+  left: 6.31rem;
+  height: 5.63rem;
+}
+.group-child,
+.group-item {
+  position: absolute;
+  top: 0;
+  left: 4.38rem;
+  border-radius: 0 var(--br-6xl) var(--br-6xl) 0;
+  background-color: var(--color-limegreen);
+  width: 4rem;
+  height: 3rem;
+}
+.group-item {
+  top: 3rem;
+  left: 4rem;
+  background-color: var(--color1);
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+}
+.div13,
+.div14 {
+  position: absolute;
+  top: 0.69rem;
+  left: 0.38rem;
+  font-weight: 500;
+  display: inline-block;
+  width: 3.5rem;
+  height: 1.31rem;
+}
+.div14 {
+  left: 5.06rem;
+  width: 2.38rem;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 3rem;
+  left: 80.31rem;
+  width: 8.38rem;
+  height: 3rem;
+  font-size: var(--font2-size);
+  color: var(--color4);
+}
+.trade-group {
+  position: absolute;
+  top: 35.31rem;
+  left: 18.25rem;
+  border-radius: var(--br-mini);
+  background-color: var(--color);
+  width: 82.3%;
+  height: 9rem;
+}
+.h32 {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  width: 34.81rem;
+  height: 2.25rem;
+}
+.trade-container {
+  top: 46.63rem;
+  border-radius: var(--br-mini);
+  background-color: var(--color);
+  width: 82.3%;
+  height: 9rem;
+}
+.child,
+.h1,
+.trade-container {
+  position: absolute;
+  left: 18.25rem;
+}
+.h1 {
+  margin: 0;
+  top: 6.56rem;
+  font-size: var(--font-size);
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--color4);
+}
+.child {
+  top: 12.19rem;
+  border-radius: 50%;
+  width: 8.81rem;
+  height: 8.81rem;
+  object-fit: cover;
+}
+.div18,
+.e-mail-kurajgmailcom,
+.h33 {
+  position: absolute;
+  left: 28.63rem;
+  font-weight: 600;
+  display: inline-block;
+  height: 2.38rem;
+}
+.h33 {
+  margin: 0;
+  top: 11.69rem;
+  font-size: inherit;
+  font-family: inherit;
+  width: 21.44rem;
+}
+.div18,
+.e-mail-kurajgmailcom {
+  top: 14.88rem;
+  width: 28.88rem;
+}
+.e-mail-kurajgmailcom {
+  margin: 0;
+  top: 17.94rem;
+  font-size: inherit;
+  font-family: inherit;
+}
+.div {
+  position: relative;
+  background-color: var(--color2);
+  width: 100%;
+  height: 64rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font1-size);
+  color: var(--color-black);
+  font-family: var(--font);
+}
+
+a.navlink {
+  color: black; /* задаем цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+
+}

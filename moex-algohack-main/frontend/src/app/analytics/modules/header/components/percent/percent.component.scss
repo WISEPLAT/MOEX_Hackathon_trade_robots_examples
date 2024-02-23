@@ -1,0 +1,27 @@
+.percent {
+  $root: &;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background-color: #787373;
+  box-shadow: 0px 8px 24px 0px rgba(246, 28, 122, 0);
+
+  &--up {
+    background-color: #049c6b;
+    #{$root} {
+      &__direction {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &--down {
+    background-color: #f00;
+  }
+
+  &__value {
+    color: #fff;
+    font-weight: 600;
+  }
+}

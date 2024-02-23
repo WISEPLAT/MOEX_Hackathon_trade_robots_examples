@@ -1,0 +1,11 @@
+session:
+  key: TLY7ythw4seJjYmBHwmv97GXX6k5DF67rLERSlMf92I=
+admin:
+  email: admin@moex.ru
+  password: admin
+database:
+  host: localhost
+  port: 5432
+  user: algopack
+  password: algopack
+  database: algopack

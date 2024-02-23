@@ -1,0 +1,235 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'name/css/news/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/news/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'name/css/super_global.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Barcode 128 Text:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="div">
+      <div class="div1">
+        <div class="component-6">
+          <div class="group-parent">
+            <img
+              class="vuesaxlinearmenu-icon"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearmenu.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'dashboard' %}">Инструменты</a>
+          </div>
+          <div class="frame-parent">
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
+            </div>
+            <div class="component-2">
+              <div class="vuesaxlinearmenu">
+                <img
+                  class="vuesaxlinearmenu-icon"
+                  alt=""
+                  src="{% static 'name/img/newsline/vuesaxlineartrade.svg' %}"
+                />
+
+                <img
+                  class="vuesaxlinearmenu-icon1"
+                  alt=""
+                  src="{% static 'name/img/newsline/vuesaxlineartrade.svg' %}"
+                />
+              </div>
+              <div class="div4">Лента</div>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
+            </div>
+            <div class="vuesaxlinearactivity-parent">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearwallet2.svg' %}"
+              />
+
+              <a class="navlink" href="{% url 'wallet' %}">Кошелек</a>
+            </div>
+          </div>
+          <div class="group-parent">
+            <img
+              class="frame-child"
+              alt=""
+              src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
+            />
+
+            <a class="navlink" href="{% url 'catalogue' %}">Каталог</a>
+          </div>
+        </div>
+        <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}" />
+      </div>
+      <header class="header">
+        <div class="vector-parent">
+          <img class="vector-icon" alt="" src="{% static 'name/img/global/vector.svg' %}" />
+
+          <div class="vestrum-wrapper">
+            <div class="vestrum">vestrum</div>
+          </div>
+        </div>
+        <div class="div8"><div>
+
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
+        <div class="parent">
+          <div class="div9">
+            <div class="vuesaxlinearsearch-normal">
+              <img
+                class="vuesaxlinearmenu-icon"
+                alt=""
+                src="{% static 'name/img/global/vuesaxlinearsearchnormal.svg' %}"
+              />
+            </div>
+            <i class="i">Введите поисковый запрос</i>
+          </div>
+          <div class="frame-wrapper">
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="ellipse-parent">
+                  <img
+                    class="frame-item"
+                    alt=""
+                    src="{% static 'name/img/global/ellipse-3212@2x.png' %}"
+                  />
+
+                  <div class="group">
+                    <div class="vestrum">Кураж</div>
+                    <img class="icons" alt="" src="{% static 'name/img/global/icons.svg' %}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <h1 class="h1">Лента новостей</h1>
+        <h3 class="h3">
+          Кураж начинает подозревать владельцев заведения в каннибализме
+        </h3>
+        <div class="div11">
+          <img class="child" alt="" src="{% static 'name/img/news/rectangle-41939@2x.png' %}" />
+        </div>
+        <div class="lorem-ipsum-dolor">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="div12">
+          <h1 class="h11">Другие новости</h1>
+        </div>
+        <div class="frame-section">
+          <div class="div13">
+            <div class="div4">
+              Кураж начинает подозревать владельцев заведения в каннибализме...
+            </div>
+            <div class="vestrum">Лента.ру</div>
+            <div class="vestrum">31.12.2023 23:59</div>
+
+          </div>
+          <div class="div13">
+            <div class="div4">
+              Кураж начинает подозревать владельцев заведения в каннибализме...
+            </div>
+            <div class="vestrum">Лента.ру</div>
+            <div class="vestrum">31.12.2023 23:59</div>
+
+          </div>
+          <div class="div13">
+            <div class="div4">
+              Кураж начинает подозревать владельцев заведения в каннибализме...
+            </div>
+            <div class="vestrum">Лента.ру</div>
+            <div class="vestrum">31.12.2023 23:59</div>
+
+          </div>
+          <div class="div13">
+            <div class="div4">
+              Кураж начинает подозревать владельцев заведения в каннибализме...
+            </div>
+            <div class="vestrum">Лента.ру</div>
+            <div class="vestrum">31.12.2023 23:59</div>
+
+          </div>
+          <div class="div13">
+            <div class="div4">
+              Кураж начинает подозревать владельцев заведения в каннибализме...
+            </div>
+            <div class="vestrum">Лента.ру</div>
+            <div class="vestrum">31.12.2023 23:59</div>
+
+          </div>
+          <div class="div13">
+            <div class="div4">
+              Кураж начинает подозревать владельцев заведения в каннибализме...
+            </div>
+            <div class="vestrum">Лента.ру</div>
+            <div class="vestrum">31.12.2023 23:59</div>
+
+          </div>
+          <div class="div13">
+            <div class="div4">
+              Кураж начинает подозревать владельцев заведения в каннибализме...
+            </div>
+            <div class="vestrum">Лента.ру</div>
+            <div class="vestrum">31.12.2023 23:59</div>
+
+          </div>
+        </div>
+        <div class="parent1">
+          <div class="div41">31.12.2023</div>
+          <div class="div42">23:59</div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

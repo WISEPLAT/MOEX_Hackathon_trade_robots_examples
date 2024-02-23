@@ -1,0 +1,2 @@
+class SharesIndex < ApplicationRecord
+end

@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url("/fonts/Raleway-VariableFont_wght.ttf");
+}
+
+@font-face {
+	font-family: 'Josephin';
+	src: url("/fonts/JosefinSans-VariableFont_wght.ttf");
+}
+
+html, input, button, option, select {
+	font-family: Raleway, sans-serif;
+}

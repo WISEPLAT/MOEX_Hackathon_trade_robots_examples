@@ -1,0 +1,13 @@
+Backtesting==0.3.3
+bokeh==3.3.2
+matplotlib==3.8.2
+moexalgo==1.0.1
+numpy==1.26.2
+pandas==2.1.3
+pandas-ta==0.3.14b0
+plotly==5.18.0
+prophet==1.1.5
+scipy==1.11.4
+streamlit==1.29.0
+streamlit-aggrid==0.3.4.post3
+tqdm==4.66.1

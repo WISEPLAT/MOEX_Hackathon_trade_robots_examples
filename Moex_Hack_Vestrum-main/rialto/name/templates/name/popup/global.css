@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font: Montserrat;
+
+  /* font sizes */
+  --font2-size: 1.25rem;
+  --font-size: 1.88rem;
+  --font-size-mini: 0.94rem;
+  --font1-size: 2.81rem;
+
+  /* Colors */
+  --color: #d4d4d4;
+  --color2: #212325;
+  --color-silver: #b8b6b6;
+  --color-white: #fff;
+  --color1: #f3f4f6;
+  --color3: #454545;
+
+  /* Paddings */
+  --padding-3xs: 0.63rem;
+  --padding-6xl: 1.56rem;
+
+  /* Border radiuses */
+  --br-2xs: 11px;
+}

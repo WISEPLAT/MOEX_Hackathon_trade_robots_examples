@@ -1,0 +1,32 @@
+.client_message{
+    position: relative;
+    display: flex;
+    max-width: 550px;
+    width: fit-content;
+    padding: 8px 12px 10px 12px;
+    flex-direction: column;
+    font-size: var(--middle-size);
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #6D7986;
+    border-radius: 20px 4px 20px 20px;
+    height: fit-content;
+    align-self: flex-end;
+    color: white;
+    white-space: pre-line;
+    word-wrap: anywhere;
+}
+
+.client_message span{
+    white-space: nowrap;
+}
+
+
+.time{
+    position: absolute;
+    right: 12px;
+    bottom: -16px;
+    font-size: var(--small-size);
+    color: rgba(34, 34, 34, 0.50)
+}
+

@@ -1,0 +1,20 @@
+.newsItem {
+  height: 100%;
+  width: 100%;
+  max-height: 310px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:hover {
+    border: 1px solid red;
+  }
+}
+
+
+.title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+

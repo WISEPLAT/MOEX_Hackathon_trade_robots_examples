@@ -1,0 +1,16 @@
+root = /api/v1/
+
+Тестовый запрос для проверки сети
+- /version
+    goMessage
+
+Создание задачи
+    - userid id пользователя
+- /task/add
+    goTask
+
+Список всех задач
+- /task/list
+    [goTask]
+
+

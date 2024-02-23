@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+html {
+  font-size: 13px;
+}
+
+.component-6 {
+    position: absolute;
+    top: 10.19rem;
+    left: 2.44rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--gap-19xl);
+}
+.image-3-icon {
+    position: absolute;
+    top: 47.13rem;
+    left: calc(50% - 6rem);
+    width: 13rem;
+    height: 3.75rem;
+    object-fit: cover;
+}
+.div1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color);
+    border-right: 1px solid var(--color1);
+    box-sizing: border-box;
+    width: 17rem;
+    height: 64rem;
+    font-size: var(--font-size-base);
+    color: var(--color1);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color);
+    border-bottom: 1px solid var(--color1);
+    width: 100%;
+    padding: var(--padding-3xs) 0;
+    text-align: left;
+    font-size: var(--font-size-6xl);
+    color: var(--color4);
+    font-family: var(--font);
+    z-index: 1000;
+
+}

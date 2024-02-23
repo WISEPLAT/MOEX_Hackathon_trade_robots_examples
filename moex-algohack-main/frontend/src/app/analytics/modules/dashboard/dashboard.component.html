@@ -1,0 +1,55 @@
+<div class="dashboard">
+  <form [formGroup]="settingService.form">
+    <h2 class="title">Настройки</h2>
+    <div class="tickers">
+      <p-skeleton
+        *ngIf="!(tickerService.loaded$ | async); else tickerInput"
+        height="3rem"
+      ></p-skeleton>
+      <ng-template #tickerInput>
+        <p-dropdown
+          [options]="(tickerService.data$ | async) ?? []"
+          formControlName="ticker"
+          optionLabel="name"
+          class="tickers"
+          placeholder="Выберите тикер"
+          [filter]="true"
+          filterBy="name"
+        ></p-dropdown>
+      </ng-template>
+    </div>
+
+    <div class="params">
+      <div class="field">
+        <label>Интервал</label>
+        <p-inputNumber formControlName="param1"></p-inputNumber>
+        -
+        <p-inputNumber formControlName="param2"></p-inputNumber>
+        <span>2÷50</span>
+      </div>
+    </div>
+    <p-toast></p-toast>
+    <p-button
+      label="Сохранить"
+      (click)="settingService.post()"
+      severity="danger"
+      [disabled]="(settingService.loading$ | async) ?? false"
+    ></p-button>
+  </form>
+
+  <div>
+    <p-card title="Graph">
+      <p-chart type="line" [data]="data" [options]="options"></p-chart>
+    </p-card>
+    <div class="result" *ngIf="balanceService.balance$ | async as balance">
+      <div class="result-field">
+        <div class="result-field__label">Акций в портфеле</div>
+        <div class="result-field__value">{{ balance.tickersCount }}</div>
+      </div>
+      <div class="result-field">
+        <div class="result-field__label">Остаток на счете</div>
+        <div class="result-field__value">{{ balance.total | currency }}</div>
+      </div>
+    </div>
+  </div>
+</div>

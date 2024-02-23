@@ -1,0 +1,13 @@
+<div class="balance" *ngIf="balance; else balanceSkeleton">
+  <div class="balance-item">
+    <div class="balance-item__label">Ваш общий баланс</div>
+    <div class="balance-item__value">{{ balance.total | currency }}</div>
+  </div>
+  <div class="balance-item">
+    <app-percent [percent]="balance.income"></app-percent>
+  </div>
+</div>
+
+<ng-template #balanceSkeleton>
+  <p-skeleton width="20rem" styleClass="mb-2"></p-skeleton>
+</ng-template>

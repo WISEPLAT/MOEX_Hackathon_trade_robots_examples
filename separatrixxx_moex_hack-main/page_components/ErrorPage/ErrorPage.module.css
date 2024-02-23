@@ -1,0 +1,29 @@
+.errorPage {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+
+	width: 100%;
+	height: 100vh;
+
+	transition-duration: 300ms;
+}
+
+.errorText {
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.errorText:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--primary);
+}
+
+@media (min-width: 1024px) {
+	.errorText:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--primary);
+	}
+}

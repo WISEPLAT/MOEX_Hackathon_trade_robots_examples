@@ -1,0 +1,79 @@
+<% if @price_lines %>
+  <div id="index-chart">
+  </div>
+
+  <script>
+    var trace_b = {
+      name: 'IMOEX',
+      x: <%= raw(@benchmark.map { |l| l[0].to_s }.to_json) %>,
+      open: <%= raw(@benchmark.map { |l| l[1].to_f }.to_json) %>,
+      close: <%= raw(@benchmark.map { |l| l[2].to_f }.to_json) %>,
+      high: <%= raw(@benchmark.map { |l| l[1..2].max.to_f }.to_json) %>,
+      low: <%= raw(@benchmark.map { |l| l[1..2].min.to_f }.to_json) %>,
+
+      // cutomise colors
+      increasing: {line: {color: 'black'}},
+      decreasing: {line: {color: 'lightgray'}},
+
+      type: 'ohlc',
+      xaxis: 'x',
+      yaxis: 'y'
+    };
+
+    <% colors = [
+        ["blue", "lightblue"],
+        ["green", "lightgreen"],
+        ["crimson", "lightcoral"],
+        ["darkorange", "gold"],
+        ["purple", "pink"],
+        ["olive", "darkseagreen"],
+        ["Indigo", "Lavender"],
+        ["brown", "BurlyWood"],
+      ]
+    %>
+    <% @price_lines.each_with_index do |(name, prices), i| %>
+      var trace_<%= i %> = {
+        name: '<%= name %>',
+        x: <%= raw(prices.map { |l| l[0].to_s }.to_json) %>,
+        open: <%= raw(prices.map { |l| l[1].to_f }.to_json) %>,
+        close: <%= raw(prices.map { |l| l[2].to_f }.to_json) %>,
+        high: <%= raw(prices.map { |l| l[1..2].max.to_f }.to_json) %>,
+        low: <%= raw(prices.map { |l| l[1..2].min.to_f }.to_json) %>,
+        type: 'ohlc',
+        xaxis: 'x',
+        yaxis: 'y',
+
+        increasing: {line: {color: '<%= colors[i % colors.size][0] %>'}},
+        decreasing: {line: {color: '<%= colors[i % colors.size][1] %>'}},
+      };
+    <% end %>
+
+    var data = [trace_b, <%= @price_lines.size.times.to_a.map { |i| "trace_#{i}" }.join(',') %>];
+
+    var layout = {
+      dragmode: 'zoom',
+      showlegend: true,
+      hovermode: 'x',
+      height: 700,
+      legend: {
+        x: 1,
+        y: 1,
+        xanchor: 'right',
+        yanchor: 'bottom'
+      },
+      xaxis: {
+        showspikes: true,
+        spikemode: 'across',
+        spikesnap: 'cursor',
+        showline: true,
+        showgrid: true,
+        rangeslider: {
+          visible: false
+        }
+      },
+      yaxis: {title: 'IMOEX points'},
+    };
+
+    Plotly.newPlot('index-chart', data, layout);
+  </script>
+<% end %>

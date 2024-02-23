@@ -1,0 +1,160 @@
+№;Code;Security name (rus);Security name (eng);Sector (rus);Sector (eng);Security status (rus);Security status (eng)
+1;AKRN;"ПАО ""Акрон"", ао";PJSC Acron, Ordinary shares;Химия и нефтехимия;Chemicals and Pertochemicals;;
+2;KAZT;"ПАО ""КуйбышевАзот"", ао";"PJSC ""KuibyshevAzot"", ordinary shares";Химия и нефтехимия;Chemicals and Pertochemicals;;
+3;KZOS;"ПАО ""Казаньоргсинтез"", ао";"PJSC ""Kazanorgsintez"", Ordinary shares";Химия и нефтехимия;Chemicals and Pertochemicals;;
+4;KZOSP;"ПАО ""Казаньоргсинтез"", ап";"PJSC ""Kazanorgsintez"", Preferred shares";Химия и нефтехимия;Chemicals and Pertochemicals;;
+5;NKNC;"ПАО ""Нижнекамскнефтехим"", ао";"PJSC ""Nizhnekamskneftekhim"", Ordinary shares";Химия и нефтехимия;Chemicals and Pertochemicals;;
+6;NKNCP;"ПАО ""Нижнекамскнефтехим"", ап";"PJSC ""Nizhnekamskneftekhim"", Preferred shares";Химия и нефтехимия;Chemicals and Pertochemicals;;
+7;PHOR;"ПАО ""ФосАгро"", ао";"PJSC ""PhosAgro"", Ordinary shares";Химия и нефтехимия;Chemicals and Pertochemicals;;
+8;URKA;"ПАО ""Уралкалий"", ао";PJSC Uralkali, Ordinary shares;Химия и нефтехимия;Chemicals and Pertochemicals;Торги прекращены;Trading stopped
+9;AFKS;"ПАО АФК ""Система"", ао";Sistema PJSFC, Ordinary shares;Холдинги;Conglomerate;;
+10;ENPG;"МКПАО ""ЭН+ ГРУП"", ао";EN+ GROUP IPJSC, Ordinary shares;Холдинги;Conglomerate;;
+11;ENPL;"МКПАО ""ЭН+ ГРУП"" (эмитент депозитарных расписок - Citibank N.A.), депозитарные расписки иностранного эмитента на акции";EN+ GROUP IPJSC (the issuer of depository receipts - ), depository receipts representing rights on shares of foreign issuer;Холдинги;Conglomerate;Торги прекращены;Trading stopped
+12;ETLN;ETALON GROUP PLC, ДР иностранного эмитента;ETALON GROUP PLC, DR (the issuer of depository receipts - The Bank of New York Mellon);Строительство;Construction;;
+13;INGR ;ПАО «Инград», ао;"PJSC ""INGRAD"", Ordinary shares";Строительство;Construction;;
+14;LSRG;"ПАО ""Группа ЛСР"", ао";"PJSC ""LSR Group"", Ordinary shares";Строительство;Construction;;
+15;PIKK;"ПАО ""Группа Компаний ПИК"", ао";"PJSC ""PIK Group"", Ordinary shares";Строительство;Construction;;
+16;SMLT;"ПАО ""ГК ""Самолет"", ао";"PJSC ""Samolet Group"", Ordinary shares";Строительство;Construction;;
+17;ABIO;"ПАО ""Артген"", ао";"PJSC ""Artgen"", ordinary shares";Потребительский сектор;Consumer;;
+18;AGRO;РОС АГРО ПЛС, ДР иностранного эмитента на акции (эмитент ДР —The Bank of New York Mellon Corporation);ROS AGRO PLC, DR (Issuer The Bank of New York Mellon Corporation);Потребительский сектор;Consumer;;
+19;APTK;"ПАО ""Аптечная сеть 36,6"", ао";"PJSC ""Pharmacy Chain 36.6"", Ordinary shares";Потребительский сектор;Consumer;;
+20;AQUA;"ПАО ""Русская Аквакультура""";"PJSC ""Russian Aquaculture"", Ordinary shares";Потребительский сектор;Consumer;;
+21;AVAZ;"ПАО ""АВТОВАЗ"", ао";"PJSC ""AVTOVAZ"", Ordinary shares";Потребительский сектор;Consumer;Торги прекращены;Trading stopped
+22;AVAZP;"ПАО ""АВТОВАЗ"", ап";"PJSC ""AVTOVAZ"", Preferred shares";Потребительский сектор;Consumer;Торги прекращены;Trading stopped
+23;BELU;"ПАО ""Белуга Групп"", ао ";"PJSC ""Beluga Group"", Ordinary shares";Потребительский сектор;Consumer;;
+24;DIXY;"ПАО ""ДИКСИ Групп"", ао";"PJSC ""DIXY GROUP"", Ordinary shares";Потребительский сектор;Consumer;Торги прекращены;Trading stopped
+25;DSKY;"ПАО ""Детский мир"", ао";"PJSC ""Detsky mir"", Ordinary shares";Потребительский сектор;Consumer;;
+26;FIVE;Икс 5 Ритейл Груп Н.В., ДР иностранного эмитента на акции (эмитент ДР — The Bank of New York Mellon Corporation);X5 Retail Group N.V., DR (Issuer The Bank of New York Mellon Corporation);Потребительский сектор;Consumer;;
+27;FIXP;Фикс Прайс Груп Лтд, ДР иностранного эмитента на акции;Fix Price Group Ltd, Depository receipts;Потребительский сектор;Consumer;;
+28;GCHE;"ПАО ""Группа Черкизово"", ао";"PJSC ""Cherkizovo Group"", Ordinary shares";Потребительский сектор;Consumer;;
+29;GEMC;ЮНАЙТЕД МЕДИКАЛ ГРУП КИ ПИЭЛСИ, ДР;UNITED MEDICAL GROUP CY PLC, Depository receipts;Потребительский сектор;Consumer;;
+30;HNFG;"ПАО ""ЭЙЧ ЭФ ДЖИ"", ао";HFG PJSC, ordinary shares;Потребительский сектор;Consumer;;
+31;LENT;Лента Лтд., ао;Lenta Ltd., ordinary shares;Потребительский сектор;Consumer;;
+32;MDMG;МД МЕДИКАЛ ГРУП ИНВЕСТМЕНТС ПЛС, ДР иностранного эмитента;MD MEDICAL GROUP INVESTMENTS PLC, DR (the issuer of depository receipts - JPMorgan Chase Bank, N.A.);Потребительский сектор;Consumer;;
+33;MGNT;"ПАО ""Магнит"", ао";"PJSC ""Magnit"", Ordinary shares";Потребительский сектор;Consumer;;
+34;MVID;"ПАО ""М.видео"", ао";"PJSC ""M.video"", Ordinary shares";Потребительский сектор;Consumer;;
+35;OKEY;АО О'КЕЙ ГРУПП, ДР иностранного эмитента на акции;OKEY Group, Depository receipts;Потребительский сектор;Consumer;;
+36;ORUP;"ПАО ""ОР"", ао";"PJSC ""OR"", Ordinary shares";Потребительский сектор;Consumer;Торги прекращены;Trading stopped
+37;OTCP;"""Отисифарм"", ао";"PJSC ""OTCPharm"", Ordinary shares";Потребительский сектор;Consumer;Торги прекращены;Trading stopped
+38;PRTK;"ПАО ""ПРОТЕК"", ао";PROTEK, Ordinary shares;Потребительский сектор;Consumer;Торги прекращены;Trading stopped
+39;RBCM;"ПАО ""ГК РБК"", ао";RBC Group PJSC, Ordinary shares;Потребительский сектор;Consumer;;
+40;SVAV;"ПАО ""СОЛЛЕРС"", ао";"PJSC ""SOLLERS"", Ordinary shares";Потребительский сектор;Consumer;;
+41;WUSH;ПАО «ВУШ Холдинг», ао;"PJSC ""WHOOSH Holding"", Ordinary shares";Потребительский сектор;Consumer;;
+42;DVEC;"ПАО ""Дальневосточная энергетическая компания"", ао ";"PJSC ""FEEC"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+43;ELFV;"ПАО ""ЭЛ5-Энерго"", ао";"PJSC ""EL5-Energo"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+44;FEES;"ПАО ""ФСК - Россети"", ао";"PJSC ""FGC Rosseti"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+45;HYDR;"ПАО ""РусГидро"", ао";"PJSC ""RusHydro"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+46;IRAO;"ПАО ""Интер РАО"", ао";"PJSC ""Inter RAO"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+47;IRGZ;"ПАО ""Иркутскэнерго"", ао";"JSC ""Irkutskenergo"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+48;KGKC;"ПАО ""Курганская генерирующая компания"", ао";"PJSC ""Kurgan Generation Company"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+49;LSNG;"ПАО ""Россети Ленэнерго"", ао";"""Rosseti Lenenergo"" PJSC, Ordinary shares";Электроэнергетика;Electric Utilities;;
+50;LSNGP;"ПАО ""Ленэнерго"", ап";"PJSC ""LENENERGO"", Preferred shares";Электроэнергетика;Electric Utilities;;
+51;MRKC;"ПАО ""Россети Центр"", ао";"PJSC ""Rosseti Centre"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+52;MRKP;"ПАО ""Россети Центр и Приволжье"", ао";"PJSC ""Rosseti Center and Volga Region"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+53;MRKS;"ПАО ""Россети Сибирь"", ао";"PJSC ""Rosseti Siberia"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+54;MRKU;"ОАО ""МРСК Урала"", ао";"JSC ""IDGC of Urals"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+55;MRKV;"ПАО ""Россети Волга"", ао";"PJSC ""Rosseti Volga"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+56;MRKY;"ПАО ""Россети Юг"", ао";"PJSC ""ROSSETI South"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+57;MRKZ;"ПАО ""Россети Северо-Запад"", ао";"PJSC ""Rosseti North-West"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+58;MSNG;"ПАО ""Мосэнерго"", ао";"PJSC ""MOSENERGO"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+59;MSRS;"ПАО ""МОЭСК"", ао";"PJSC ""MOESK"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+60;OGKB;"ПАО ""ОГК-2"", ао";"JSC ""OGK-2"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+61;RSTI;"ПАО ""Россети"", ао";"PJSC ""ROSSETI"", Ordinary shares";Электроэнергетика;Electric Utilities;Торги прекращены;Trading stopped
+62;RSTIP;"ПАО ""Россети"", ап";"PJSC ""ROSSETI"", Preferred shares";Электроэнергетика;Electric Utilities;Торги прекращены;Trading stopped
+63;TGKA;"ПАО ""ТГК-1"", ао";"PJSC ""TGC-1"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+64;TGKB;"ПАО ""ТГК-2"", ао";"PJSC ""TGC-2"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+65;TGKD;"ПАО ""Квадра"", ао";"PJSC ""Quadra - Power Generation"", Ordinary shares";Электроэнергетика;Electric Utilities;Торги прекращены;Trading stopped
+66;TGKN;"ПАО ""ТГК-14"", ао";"PJSC ""TGC-14"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+67;TNSE;"ПАО Группа компаний ""ТНС энерго""";"PJSC Group of companies ""TNS energo"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+68;UPRO;"ПАО ""Юнипро"", ао";"PJSC ""Unipro"", Ordinary shares";Электроэнергетика;Electric Utilities;;
+69;KBTK;"ПАО ""КТК"", ао";"PJSC ""KTC"", Ordinary shares";Энергоресурсы;Energy;Торги прекращены;Trading stopped
+70;BANEP;"ПАО АНК ""Башнефть"", ап";PJSC Bashneft, Preferred shares;Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+71;EUTR;"ПАО ""ЕВРОТРАНС"", ао";"PJSC ""EvroTrans"", ordinary shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+72;GAZP;"ПАО ""Газпром"", ао";"PJSC ""GAZPROM"", Ordinary shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+73;KRKNP;"ПАО ""Саратовский НПЗ"", ап";"PJSC ""Saratov Oil Refinery"", Preferred shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+74;LKOH;"ПАО ""ЛУКОЙЛ"", ао";"PJSC ""LUKOIL"", Ordinary shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+75;MFGSP;"ОАО ""СН-МНГ"", ап";"JSC ""Slavneft-Megionneftegas"", Preferred shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+76;NVTK;"ПАО ""НОВАТЭК"", ао";"JSC ""NOVATEK"", Ordinary shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+77;RNFT;"ПАО ""НК ""РуссНефть"", ао";"PJSC ""RussNeft"", Ordinary shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+78;ROSN;"ПАО ""НК ""Роснефть"", ао";"PJSC ""Rosneft"", Ordinary shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+79;SNGS;"ПАО ""Сургутнефтегаз"", ао";"PJSC ""Surgutneftegas"", Ordinary shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+80;SNGSP;"ПАО ""Сургутнефтегаз"", ап";"PJSC ""Surgutneftegas"", Preferred shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+81;TATN;"ПАО ""Татнефть"" им. В.Д. Шашина, ао";"PJSC ""TATNEFT"", Ordinary shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+82;TATNP;"ПАО ""Татнефть"" им. В.Д. Шашина, ап";"PJSC ""TATNEFT"", Preferred shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+83;TRNFP;"ПАО ""Транснефть"", ап";"PJSC ""Transneft"", Preferred shares";Энергоресурсы (Нефть и газ);Energy (Oil & Gas);;
+84;BSPB;"ПАО ""Банк ""Санкт-Петербург"", ао";"PJSC ""Bank ""Saint-Petersburg"", Ordinary shares";Финансы;Financials;;
+85;CARM;ПАО «СТГ», ао;STG PJSC, Ordinary shares;Финансы;Financials;;
+86;CBOM;"ПАО ""МОСКОВСКИЙ КРЕДИТНЫЙ БАНК"", ао";"PJSC ""CREDIT BANK OF MOSCOW"", Ordinary shares";Финансы;Financials;;
+87;FTRE;"ПАО ""ФГ БУДУЩЕЕ"", ао";"PJSC ""FG FUTURE"", Ordinary shares";Финансы;Financials;Торги прекращены;Trading stopped
+88;MOEX;ПАО Московская Биржа, ао;"PJSC ""Moscow Exchange"", Ordinary shares";Финансы;Financials;;
+89;OFCB;"Банк ""Финансовая Корпорация Открытие""";"PJSC ""Bank Otkritie Financial Corporation"", Ordinary shares ";Финансы;Financials;Торги прекращены;Trading stopped
+90;OPIN;"ПАО ""ИНГРАД"", ао";"PJSC ""INGRAD"", ordinary share ";Финансы ;Financials;Торги прекращены;Trading stopped
+91;PSBR;"ПАО ""Промсвязьбанк"", ао";"PJSC ""Promsvyazbank"", Ordinary shares";Финансы;Financials;Торги прекращены;Trading stopped
+92;QIWI;КИВИ ПиЭлСи, ДР иностранного эмитента на акции (эмитент ДР — The Bank of New York Mellon Corporation);QIWI PLC, DR (Issuer The Bank of New York Mellon Corporation);Финансы;Financials;;
+93;RENI;"ПАО ""Группа Ренессанс Страхование"", ао";PJSC Renaissance Insurance Group, Ordinary shares;Финансы;Financials;;
+94;RGSS;"ПАО Страховая Компания ""Росгосстрах"", ао";"PJSC ""Rosgosstrakh"" Insurance Company, Ordinary shares ";Финансы;Financials;;
+95;SBER;ПАО Сбербанк, ао;"PJSC ""Sberbank"", Ordinary shares";Финансы;Financials;;
+96;SBERP;ПАО Сбербанк, ап;"PJSC ""Sberbank"", Preferred shares";Финансы;Financials;;
+97;SFIN;"ПАО ""ЭсЭфАй"", ао";"PJSC ""SFI"", Ordinary shares";Финансы;Financials;;
+98;SPBE ;ПАО «СПБ Биржа, ао;"PJSC ""SPB Exchange"", Ordinary shares";Финансы;Financials;;
+99;TCSG;ТиСиЭс Груп Холдинг ПиЭлСи, ДР иностранного эмитента на акции (эмитент депозитарных расписок - JPMorgan Chase Bank);TCS Group Holding PLC, DR (the issuer of depository receipts - JPMorgan Chase Bank);Финансы;Financials;;
+100;VTBR;Банк ВТБ (ПАО), ао;VTB Bank (PJSC), Ordinary shares;Финансы;Financials;;
+101;VZRZ;"ПАО Банк ""Возрождение"", ао";"PJSC ""Vozrozhdenie"" Bank, Ordinary shares";Финансы ;Financials;Торги прекращены;Trading stopped
+102;SGZH;"ПАО ГК ""Сегежа"", ао";"PJSC Group of Companies ""Segezha"", Ordinary shares";Лесная промышленность;Forest products;;
+103;GAZA;"ПАО ""ГАЗ"", ао";"PJSC ""GAZ"", Ordinary shares";Промышленность;Industrials;;
+104;HMSG;ГМС ГИДРАВЛИК МАШИНС ЭНД СИСТЕМС ГРУП ПЛС), ДР;HMS HYDRAULIC MACHINES & SYSTEMS GROUP PLC ;Промышленность;Industrials;;
+105;KMAZ;"ПАО ""КАМАЗ"", ао";"PJSC ""KAMAZ"", Ordinary shares";Промышленность;Industrials;;
+106;MSTT;"ПАО ""МОСТОТРЕСТ"", ао";"PJSC ""MOSTOTREST"", Ordinary shares";Промышленность;Industrials;;
+107;UNAC;"ПАО ""Объединенная авиастроительная корпорация"", ао";"PJSC ""United Aircraft Corporation"", Ordinary shares";Промышленность;Industrials;;
+108;UWGN;"ПАО ""НПК ОВК"", ао";"PJSC ""RPC UWC"", Ordinary shares";Промышленность;Industrials;;
+109;ASTR;"ПАО ""Группа Астра"", ао";PJSC Astra Group, ordinary shares;Информационные технологии;Information Technologies;;
+110;CIAN;Циан ПиЭлСи, ДР (эмитент депозитарных расписок - The Bank of New York Mellon);Cian PLC, DR (the issuer of depository receipts - The Bank of New York Mellon);Информационные технологии;Information Technologies;;
+111;HHRU;ХэдХантер Групп ПИЭЛСИ, ДР иностранного эмитента;HeadHunter Group PLC, DR (the issuer of depository receipts - JPMorgan Chase Bank, N.A.);Информационные технологии;Information Technologies;;
+112;VKCO;"МКПАО ""ВК"", ао";"IPJSC ""VK"", Ordinary shares";Информационные технологии;Information Technologies;;
+113;OZON;Озон Холдингс ПиЭлСи, ДР иностранного эмитента на акции;Ozon Holdings PLC, DR (the issuer of depository receipts - The Bank of New York Mellon);Информационные технологии;Information Technologies;;
+114;POSI ;ПАО «Группа Позитив», ао;PJSC Positive Group, ordinary shares;Информационные технологии;Information Technologies;;
+115;SFTL;Софтлайн Холдинг ПиЭлСи, ДР;Softline Holding PLC, DR;Информационные технологии;Information Technologies;;
+116;SOFL;"ПАО ""Софтлайн"", ао";PJSC Softline, ordinary shares;Информационные технологии;Information Technologies;;
+117;YNDX;Яндекс Н.В., акции иностранного эмитента;Yandex N.V., Shares of a foreign issuer;Информационные технологии;Information Technologies;;
+118;ALRS;"АК ""АЛРОСА"" (ПАО), ао";"PJSC ""ALROSA"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+119;AMEZ;"ПАО ""Ашинский метзавод"", ао";"PJSC ""Ashinskiy metzavod"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+120;BRZL;"ПАО ""Бурятзолото"", ао";"PJSC ""Buryatzoloto"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+121;CHMF;"ПАО ""Северсталь"", ао";"PJSC ""Severstal"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+122;CHMK;"ПАО ""ЧМК"", ао";"PJSC ""CMP"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+123;CHZN;"ПАО ""Челябинский цинковый завод"", ао";"PJSC ""Chelyabinsk Zinc Plant"", Ordinary shares";Металлы и добыча;Metals and Mining;Торги прекращены;Trading stopped
+124;ENPG;МКПАО «ЭН+ ГРУП», ао;EN+ GROUP IPJSC, Ordinary shares;Металлы и добыча;Metals and Mining;;
+125;GMKN;"ПАО ""ГМК ""Норильский никель"", ао";"PJSC ""MMC ""NORILSK NICKEL"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+126;LNZL;"ПАО ""Лензолото"", ао";"PJSC ""Lenzoloto"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+127;LNZLP;"ПАО ""Лензолото"", ап";"PJSC ""Lenzoloto"", Preferred shares";Металлы и добыча;Metals and Mining;;
+128;MAGN;"ПАО ""ММК"", ао";"PJSC ""MMK"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+129;MTLR;"ПАО ""Мечел"", ао";"PJSC ""Mechel"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+130;MTLRP;"ПАО ""Мечел"", ап";"PJSC ""Mechel"", Preferred shares";Металлы и добыча;Metals and Mining;;
+131;NLMK;"ПАО ""НЛМК"", ао";"PJSC ""NLMK"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+132;PLZL;"ПАО ""Полюс"", ао";"PJSC ""Polyus"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+133;POGR;Петропавловск ПиЭлСи, акции иностранного эмитента;Petropavlovsk PLC, shares of a foreign issuer;Металлы и добыча;Metals and Mining;Торги прекращены;Trading stopped
+134;POLY;Полиметалл Интернэшнл плс, акции иностранного эмитента;Polymetal International plc, Shares of a foreign issuer;Металлы и добыча;Metals and Mining;;
+135;RASP;"ПАО ""Распадская"", ао";"PJSC ""Raspadskaya"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+136;ROLO;"ПАО ""Русолово"", ао";"PJSC ""Rusolovo"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+137;RUAL;"МКПАО ""Объединенная компания ""РУСАЛ"", ао";United Company RUSAL IPJSC, Ordinary shares;Металлы и добыча;Metals and Mining;;
+138;SELG;"ПАО ""Селигдар"", ао";"PJSC ""Seligdar"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+139;SELGP;"ПАО ""Селигдар"", ап";"PJSC ""Seligdar"", Preferred shares";Металлы и добыча;Metals and Mining;Торги прекращены;Trading stopped
+140;TRMK;"ПАО ""ТМК"", ао";"PJSC ""TMK"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+141;UGLD;"ПАО ""ЮГК""";"PJSC ""UGC""";Металлы и добыча;Metals and Mining;;
+142;UNKL;"ПАО ""Комбинат Южуралникель"", ао";"PJSC ""Southern Urals Nickel Plant"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+143;VSMO;"ПАО ""Корпорация ВСМПО-АВИСМА"", ао";"PJSC ""VSMPO-AVISMA Corporation"", Ordinary shares";Металлы и добыча;Metals and Mining;;
+144;CNTLP;"ПАО ""Центральный телеграф"", ап";"PJSC ""Central Telegraph"", Preferred shares";Телекоммуникации;Telecommunication Services;;
+145;MFON;"ПАО ""МегаФон"", ао";"PJSC ""MegaFon"", Ordinary shares";Телекоммуникации;Telecommunication Services;Торги прекращены;Trading stopped
+146;MGTSP;ПАО МГТС, ап;"PJSC ""MGTS"", Preferred shares";Телекоммуникации;Telecommunication Services;;
+147;MTSS;"ПАО ""МТС"", ао";"PJSC ""MTS"", Ordinary shares";Телекоммуникации;Telecommunication Services;;
+148;RTKM;"ПАО ""Ростелеком"", ао";"PJSC ""Rostelecom"", Ordinary shares";Телекоммуникации;Telecommunication Services;;
+149;RTKMP;"ПАО ""Ростелеком"", ап";"PJSC ""Rostelecom"", Preferred shares";Телекоммуникации;Telecommunication Services;;
+150;TTLK;"ПАО ""Таттелеком"", ао";"PJSC ""Tattelecom"", Ordinary shares";Телекоммуникации;Telecommunication Services;;
+151;VEON-RX ;ПАО «Вымпелком», ао;VEON Ltd., ordinary shares;Телекоммуникации;Telecommunication Services;;
+152;AFLT;"ПАО ""Аэрофлот"", ао";"PJSC ""Aeroflot"", Ordinary shares";Транспорт;Transportation;;
+153;FESH;"ПАО ""ДВМП"", ао";"PJSC ""FESCO"", Ordinary shares";Транспорт;Transportation;;
+154;FLOT;"ПАО ""Совкомфлот"", ао";"PJSC ""Sovcomflot"", Ordinary shares";Транспорт;Transportation;;
+155;GLTR;Глобалтранс Инвестмент ПЛС, ДР иностранного эмитента;Globaltrans Investment PLC, DR (the issuer of depository receipts - Citibank N.A. (NYC));Транспорт;Transportation;;
+156;GTRK;"ПАО ""ГЛОБАЛТРАК МЕНЕДЖМЕНТ"", ао";"PJSC ""GLOBALTRUCK MANAGEMENT"", Ordinary shares";Транспорт;Transportation;;
+157;NKHP;"ПАО ""Новороссийский комбинат хлебопродуктов"", ао";"PJSC ""Novorossiysk Grain Plant"", Ordinary shares";Транспорт;Transportation;;
+158;NMTP;"ПАО ""НМТП"", ао";"PJSC ""NCSP"", Ordinary shares";Транспорт;Transportation;;
+159;TRCN;"ПАО ""ТрансКонтейнер"", ао";"PJSC ""TransContainer"", Ordinary shares";Транспорт;Transportation;Торги прекращены;Trading stopped
